@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B62086CE1A3C2824003691D1 /* Biodiesel_SimulationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086CD1A3C2824003691D1 /* Biodiesel_SimulationTests.m */; };
+		B62087111A3C2BE6003691D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086E21A3C2BE5003691D1 /* AppDelegate.m */; };
+		B62087121A3C2BE6003691D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B62086E41A3C2BE5003691D1 /* LaunchScreen.xib */; };
+		B62087131A3C2BE6003691D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62086E61A3C2BE5003691D1 /* Main.storyboard */; };
+		B62087141A3C2BE6003691D1 /* car.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B62086E81A3C2BE5003691D1 /* car.atlas */; };
+		B62087151A3C2BE6003691D1 /* CarAnimationScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086EA1A3C2BE5003691D1 /* CarAnimationScene.m */; };
+		B62087161A3C2BE6003691D1 /* CarAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086EC1A3C2BE5003691D1 /* CarAnimationViewController.m */; };
+		B62087171A3C2BE6003691D1 /* CarDistanceGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086EE1A3C2BE5003691D1 /* CarDistanceGame.m */; };
+		B62087181A3C2BE6003691D1 /* GasGaugeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086F01A3C2BE5003691D1 /* GasGaugeNode.m */; };
+		B62087191A3C2BE6003691D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B62086F11A3C2BE5003691D1 /* Images.xcassets */; };
+		B620871A1A3C2BE6003691D1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B62086F21A3C2BE5003691D1 /* Info.plist */; };
+		B620871B1A3C2BE6003691D1 /* InputDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086F41A3C2BE5003691D1 /* InputDataTableViewController.m */; };
+		B620871C1A3C2BE6003691D1 /* Level Up Sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B62086F51A3C2BE5003691D1 /* Level Up Sound.mp3 */; };
+		B620871D1A3C2BE6003691D1 /* LogInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086F71A3C2BE5003691D1 /* LogInTableViewController.m */; };
+		B620871E1A3C2BE6003691D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086F81A3C2BE5003691D1 /* main.m */; };
+		B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = B62086F91A3C2BE5003691D1 /* MyParticle.sks */; };
+		B62087201A3C2BE6003691D1 /* page1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B62086FA1A3C2BE5003691D1 /* page1.jpg */; };
+		B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B62086FB1A3C2BE5003691D1 /* page2.jpeg */; };
+		B62087221A3C2BE6003691D1 /* page3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B62086FC1A3C2BE5003691D1 /* page3.jpg */; };
+		B62087231A3C2BE6003691D1 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = B62086FD1A3C2BE5003691D1 /* page4.png */; };
+		B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086FF1A3C2BE5003691D1 /* PageContentViewController.m */; };
+		B62087251A3C2BE6003691D1 /* RegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */; };
+		B62087261A3C2BE6003691D1 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */; };
+		B62087271A3C2BE6003691D1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087051A3C2BE6003691D1 /* RootViewController.m */; };
+		B62087281A3C2BE6003691D1 /* ScrollingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087071A3C2BE6003691D1 /* ScrollingNode.m */; };
+		B62087291A3C2BE6003691D1 /* SimulationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087091A3C2BE6003691D1 /* SimulationOperation.m */; };
+		B620872A1A3C2BE6003691D1 /* SimulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B620870B1A3C2BE6003691D1 /* SimulationViewController.m */; };
+		B620872B1A3C2BE6003691D1 /* SmartSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B620870D1A3C2BE6003691D1 /* SmartSlider.m */; };
+		B620872C1A3C2BE6003691D1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B620870E1A3C2BE6003691D1 /* spark.png */; };
+		B620872D1A3C2BE6003691D1 /* TheSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087101A3C2BE6003691D1 /* TheSimulation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B62086C81A3C2824003691D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B62086A61A3C2824003691D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B62086AD1A3C2824003691D1;
+			remoteInfo = "Biodiesel Simulation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B62086AE1A3C2824003691D1 /* Biodiesel Simulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Biodiesel Simulation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62086C71A3C2824003691D1 /* Biodiesel SimulationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Biodiesel SimulationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62086CC1A3C2824003691D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B62086CD1A3C2824003691D1 /* Biodiesel_SimulationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Biodiesel_SimulationTests.m; sourceTree = "<group>"; };
+		B62086E11A3C2BE5003691D1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B62086E21A3C2BE5003691D1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B62086E51A3C2BE5003691D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		B62086E71A3C2BE5003691D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		B62086E81A3C2BE5003691D1 /* car.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = car.atlas; sourceTree = "<group>"; };
+		B62086E91A3C2BE5003691D1 /* CarAnimationScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarAnimationScene.h; sourceTree = "<group>"; };
+		B62086EA1A3C2BE5003691D1 /* CarAnimationScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarAnimationScene.m; sourceTree = "<group>"; };
+		B62086EB1A3C2BE5003691D1 /* CarAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarAnimationViewController.h; sourceTree = "<group>"; };
+		B62086EC1A3C2BE5003691D1 /* CarAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarAnimationViewController.m; sourceTree = "<group>"; };
+		B62086ED1A3C2BE5003691D1 /* CarDistanceGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDistanceGame.h; sourceTree = "<group>"; };
+		B62086EE1A3C2BE5003691D1 /* CarDistanceGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDistanceGame.m; sourceTree = "<group>"; };
+		B62086EF1A3C2BE5003691D1 /* GasGaugeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasGaugeNode.h; sourceTree = "<group>"; };
+		B62086F01A3C2BE5003691D1 /* GasGaugeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GasGaugeNode.m; sourceTree = "<group>"; };
+		B62086F11A3C2BE5003691D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B62086F21A3C2BE5003691D1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B62086F31A3C2BE5003691D1 /* InputDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputDataTableViewController.h; sourceTree = "<group>"; };
+		B62086F41A3C2BE5003691D1 /* InputDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputDataTableViewController.m; sourceTree = "<group>"; };
+		B62086F51A3C2BE5003691D1 /* Level Up Sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Level Up Sound.mp3"; sourceTree = "<group>"; };
+		B62086F61A3C2BE5003691D1 /* LogInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTableViewController.h; sourceTree = "<group>"; };
+		B62086F71A3C2BE5003691D1 /* LogInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTableViewController.m; sourceTree = "<group>"; };
+		B62086F81A3C2BE5003691D1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B62086F91A3C2BE5003691D1 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		B62086FA1A3C2BE5003691D1 /* page1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page1.jpg; sourceTree = "<group>"; };
+		B62086FB1A3C2BE5003691D1 /* page2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page2.jpeg; sourceTree = "<group>"; };
+		B62086FC1A3C2BE5003691D1 /* page3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page3.jpg; sourceTree = "<group>"; };
+		B62086FD1A3C2BE5003691D1 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		B62086FE1A3C2BE5003691D1 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		B62086FF1A3C2BE5003691D1 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		B62087001A3C2BE5003691D1 /* RegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewController.h; sourceTree = "<group>"; };
+		B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewController.m; sourceTree = "<group>"; };
+		B62087021A3C2BE5003691D1 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
+		B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
+		B62087041A3C2BE5003691D1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		B62087051A3C2BE6003691D1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B62087061A3C2BE6003691D1 /* ScrollingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingNode.h; sourceTree = "<group>"; };
+		B62087071A3C2BE6003691D1 /* ScrollingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingNode.m; sourceTree = "<group>"; };
+		B62087081A3C2BE6003691D1 /* SimulationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulationOperation.h; sourceTree = "<group>"; };
+		B62087091A3C2BE6003691D1 /* SimulationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulationOperation.m; sourceTree = "<group>"; };
+		B620870A1A3C2BE6003691D1 /* SimulationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulationViewController.h; sourceTree = "<group>"; };
+		B620870B1A3C2BE6003691D1 /* SimulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulationViewController.m; sourceTree = "<group>"; };
+		B620870C1A3C2BE6003691D1 /* SmartSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartSlider.h; sourceTree = "<group>"; };
+		B620870D1A3C2BE6003691D1 /* SmartSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartSlider.m; sourceTree = "<group>"; };
+		B620870E1A3C2BE6003691D1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		B620870F1A3C2BE6003691D1 /* TheSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSimulation.h; sourceTree = "<group>"; };
+		B62087101A3C2BE6003691D1 /* TheSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheSimulation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B62086AB1A3C2824003691D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62086C41A3C2824003691D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B62086A51A3C2824003691D1 = {
+			isa = PBXGroup;
+			children = (
+				B62086B01A3C2824003691D1 /* Biodiesel Simulation */,
+				B62086CA1A3C2824003691D1 /* Biodiesel SimulationTests */,
+				B62086AF1A3C2824003691D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B62086AF1A3C2824003691D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B62086AE1A3C2824003691D1 /* Biodiesel Simulation.app */,
+				B62086C71A3C2824003691D1 /* Biodiesel SimulationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B62086B01A3C2824003691D1 /* Biodiesel Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				B62087081A3C2BE6003691D1 /* SimulationOperation.h */,
+				B62087091A3C2BE6003691D1 /* SimulationOperation.m */,
+				B620870C1A3C2BE6003691D1 /* SmartSlider.h */,
+				B620870D1A3C2BE6003691D1 /* SmartSlider.m */,
+				B62086E31A3C2BE5003691D1 /* Base.lproj */,
+				B620872F1A3C2D1D003691D1 /* Sprite Kit */,
+				B62087311A3C2E68003691D1 /* View Controllers */,
+				B62087331A3C2F0F003691D1 /* Tutorial Images */,
+				B62087321A3C2EB2003691D1 /* Model */,
+				B62086E81A3C2BE5003691D1 /* car.atlas */,
+				B62086F11A3C2BE5003691D1 /* Images.xcassets */,
+				B62087301A3C2D5A003691D1 /* Supporting Files */,
+			);
+			path = "Biodiesel Simulation";
+			sourceTree = "<group>";
+		};
+		B62086CA1A3C2824003691D1 /* Biodiesel SimulationTests */ = {
+			isa = PBXGroup;
+			children = (
+				B62086CD1A3C2824003691D1 /* Biodiesel_SimulationTests.m */,
+				B62086CB1A3C2824003691D1 /* Supporting Files */,
+			);
+			path = "Biodiesel SimulationTests";
+			sourceTree = "<group>";
+		};
+		B62086CB1A3C2824003691D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B62086CC1A3C2824003691D1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B62086E31A3C2BE5003691D1 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B62086E41A3C2BE5003691D1 /* LaunchScreen.xib */,
+				B62086E61A3C2BE5003691D1 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		B620872F1A3C2D1D003691D1 /* Sprite Kit */ = {
+			isa = PBXGroup;
+			children = (
+				B62086E91A3C2BE5003691D1 /* CarAnimationScene.h */,
+				B62086EA1A3C2BE5003691D1 /* CarAnimationScene.m */,
+				B62086EF1A3C2BE5003691D1 /* GasGaugeNode.h */,
+				B62086F01A3C2BE5003691D1 /* GasGaugeNode.m */,
+				B62086F91A3C2BE5003691D1 /* MyParticle.sks */,
+				B62087061A3C2BE6003691D1 /* ScrollingNode.h */,
+				B62087071A3C2BE6003691D1 /* ScrollingNode.m */,
+			);
+			name = "Sprite Kit";
+			sourceTree = "<group>";
+		};
+		B62087301A3C2D5A003691D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B62086E11A3C2BE5003691D1 /* AppDelegate.h */,
+				B62086E21A3C2BE5003691D1 /* AppDelegate.m */,
+				B62086F21A3C2BE5003691D1 /* Info.plist */,
+				B62086F51A3C2BE5003691D1 /* Level Up Sound.mp3 */,
+				B62086F81A3C2BE5003691D1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B62087311A3C2E68003691D1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B62086EB1A3C2BE5003691D1 /* CarAnimationViewController.h */,
+				B62086EC1A3C2BE5003691D1 /* CarAnimationViewController.m */,
+				B62086F31A3C2BE5003691D1 /* InputDataTableViewController.h */,
+				B62086F41A3C2BE5003691D1 /* InputDataTableViewController.m */,
+				B62086F61A3C2BE5003691D1 /* LogInTableViewController.h */,
+				B62086F71A3C2BE5003691D1 /* LogInTableViewController.m */,
+				B62086FE1A3C2BE5003691D1 /* PageContentViewController.h */,
+				B62086FF1A3C2BE5003691D1 /* PageContentViewController.m */,
+				B62087001A3C2BE5003691D1 /* RegisterTableViewController.h */,
+				B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */,
+				B62087021A3C2BE5003691D1 /* ResultsTableViewController.h */,
+				B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */,
+				B62087041A3C2BE5003691D1 /* RootViewController.h */,
+				B62087051A3C2BE6003691D1 /* RootViewController.m */,
+				B620870A1A3C2BE6003691D1 /* SimulationViewController.h */,
+				B620870B1A3C2BE6003691D1 /* SimulationViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B62087321A3C2EB2003691D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B62086ED1A3C2BE5003691D1 /* CarDistanceGame.h */,
+				B62086EE1A3C2BE5003691D1 /* CarDistanceGame.m */,
+				B620870E1A3C2BE6003691D1 /* spark.png */,
+				B620870F1A3C2BE6003691D1 /* TheSimulation.h */,
+				B62087101A3C2BE6003691D1 /* TheSimulation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B62087331A3C2F0F003691D1 /* Tutorial Images */ = {
+			isa = PBXGroup;
+			children = (
+				B62086FA1A3C2BE5003691D1 /* page1.jpg */,
+				B62086FB1A3C2BE5003691D1 /* page2.jpeg */,
+				B62086FC1A3C2BE5003691D1 /* page3.jpg */,
+				B62086FD1A3C2BE5003691D1 /* page4.png */,
+			);
+			name = "Tutorial Images";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B62086AD1A3C2824003691D1 /* Biodiesel Simulation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B62086D11A3C2824003691D1 /* Build configuration list for PBXNativeTarget "Biodiesel Simulation" */;
+			buildPhases = (
+				B62086AA1A3C2824003691D1 /* Sources */,
+				B62086AB1A3C2824003691D1 /* Frameworks */,
+				B62086AC1A3C2824003691D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Biodiesel Simulation";
+			productName = "Biodiesel Simulation";
+			productReference = B62086AE1A3C2824003691D1 /* Biodiesel Simulation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B62086C61A3C2824003691D1 /* Biodiesel SimulationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B62086D41A3C2824003691D1 /* Build configuration list for PBXNativeTarget "Biodiesel SimulationTests" */;
+			buildPhases = (
+				B62086C31A3C2824003691D1 /* Sources */,
+				B62086C41A3C2824003691D1 /* Frameworks */,
+				B62086C51A3C2824003691D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B62086C91A3C2824003691D1 /* PBXTargetDependency */,
+			);
+			name = "Biodiesel SimulationTests";
+			productName = "Biodiesel SimulationTests";
+			productReference = B62086C71A3C2824003691D1 /* Biodiesel SimulationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B62086A61A3C2824003691D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "University Of Wisconsin Parkside";
+				TargetAttributes = {
+					B62086AD1A3C2824003691D1 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B62086C61A3C2824003691D1 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B62086AD1A3C2824003691D1;
+					};
+				};
+			};
+			buildConfigurationList = B62086A91A3C2824003691D1 /* Build configuration list for PBXProject "Biodiesel Simulation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B62086A51A3C2824003691D1;
+			productRefGroup = B62086AF1A3C2824003691D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B62086AD1A3C2824003691D1 /* Biodiesel Simulation */,
+				B62086C61A3C2824003691D1 /* Biodiesel SimulationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B62086AC1A3C2824003691D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B62087231A3C2BE6003691D1 /* page4.png in Resources */,
+				B620872C1A3C2BE6003691D1 /* spark.png in Resources */,
+				B620871C1A3C2BE6003691D1 /* Level Up Sound.mp3 in Resources */,
+				B62087121A3C2BE6003691D1 /* LaunchScreen.xib in Resources */,
+				B62087221A3C2BE6003691D1 /* page3.jpg in Resources */,
+				B62087191A3C2BE6003691D1 /* Images.xcassets in Resources */,
+				B62087141A3C2BE6003691D1 /* car.atlas in Resources */,
+				B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */,
+				B620871A1A3C2BE6003691D1 /* Info.plist in Resources */,
+				B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */,
+				B62087201A3C2BE6003691D1 /* page1.jpg in Resources */,
+				B62087131A3C2BE6003691D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62086C51A3C2824003691D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B62086AA1A3C2824003691D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B620872D1A3C2BE6003691D1 /* TheSimulation.m in Sources */,
+				B620872A1A3C2BE6003691D1 /* SimulationViewController.m in Sources */,
+				B62087281A3C2BE6003691D1 /* ScrollingNode.m in Sources */,
+				B620872B1A3C2BE6003691D1 /* SmartSlider.m in Sources */,
+				B62087161A3C2BE6003691D1 /* CarAnimationViewController.m in Sources */,
+				B62087181A3C2BE6003691D1 /* GasGaugeNode.m in Sources */,
+				B62087271A3C2BE6003691D1 /* RootViewController.m in Sources */,
+				B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */,
+				B620871D1A3C2BE6003691D1 /* LogInTableViewController.m in Sources */,
+				B62087151A3C2BE6003691D1 /* CarAnimationScene.m in Sources */,
+				B62087111A3C2BE6003691D1 /* AppDelegate.m in Sources */,
+				B62087261A3C2BE6003691D1 /* ResultsTableViewController.m in Sources */,
+				B62087251A3C2BE6003691D1 /* RegisterTableViewController.m in Sources */,
+				B620871B1A3C2BE6003691D1 /* InputDataTableViewController.m in Sources */,
+				B620871E1A3C2BE6003691D1 /* main.m in Sources */,
+				B62087291A3C2BE6003691D1 /* SimulationOperation.m in Sources */,
+				B62087171A3C2BE6003691D1 /* CarDistanceGame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B62086C31A3C2824003691D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B62086CE1A3C2824003691D1 /* Biodiesel_SimulationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B62086C91A3C2824003691D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B62086AD1A3C2824003691D1 /* Biodiesel Simulation */;
+			targetProxy = B62086C81A3C2824003691D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B62086E41A3C2BE5003691D1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B62086E51A3C2BE5003691D1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B62086E61A3C2BE5003691D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B62086E71A3C2BE5003691D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B62086CF1A3C2824003691D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B62086D01A3C2824003691D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B62086D21A3C2824003691D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Biodiesel Simulation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B62086D31A3C2824003691D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Biodiesel Simulation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B62086D51A3C2824003691D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Biodiesel SimulationTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biodiesel Simulation.app/Biodiesel Simulation";
+			};
+			name = Debug;
+		};
+		B62086D61A3C2824003691D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Biodiesel SimulationTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Biodiesel Simulation.app/Biodiesel Simulation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B62086A91A3C2824003691D1 /* Build configuration list for PBXProject "Biodiesel Simulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B62086CF1A3C2824003691D1 /* Debug */,
+				B62086D01A3C2824003691D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B62086D11A3C2824003691D1 /* Build configuration list for PBXNativeTarget "Biodiesel Simulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B62086D21A3C2824003691D1 /* Debug */,
+				B62086D31A3C2824003691D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B62086D41A3C2824003691D1 /* Build configuration list for PBXNativeTarget "Biodiesel SimulationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B62086D51A3C2824003691D1 /* Debug */,
+				B62086D61A3C2824003691D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B62086A61A3C2824003691D1 /* Project object */;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B4BCB7EA-723C-4E1F-BEF3-D085D01B1CAB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Biodiesel Simulation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>015DD836ABA0CE26217E10D6B823E5E2FEB9E07A</key>
+		<string>https://github.com/TheEffekted/Biodiesel-Simulation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Biodiesel Simulation.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>015DD836ABA0CE26217E10D6B823E5E2FEB9E07A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TheEffekted/Biodiesel-Simulation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>015DD836ABA0CE26217E10D6B823E5E2FEB9E07A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>015DD836ABA0CE26217E10D6B823E5E2FEB9E07A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Biodiesel-Simulation</string>
+		</dict>
+	</array>
+</dict>
+</plist>
