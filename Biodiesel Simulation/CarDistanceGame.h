@@ -13,6 +13,6 @@
 
 + (NSDictionary*)computeTheDistanceWithFuel:(NSDictionary*)fuel;
 + (int)getHighestUnlockedLevel;
-+ (BOOL)checkDistanceForLevelUp:(CGFloat)distance;
++ (BOOL)checkDistanceForLevelUp:(CGFloat)distance andStoreLevelUpInfo:(BOOL)shouldStore;
 
 @end

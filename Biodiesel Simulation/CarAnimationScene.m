@@ -9,6 +9,7 @@
 #import "CarAnimationScene.h"
 #import "GasGaugeNode.h"
 #import "ScrollingNode.h"
+#import "CarDistanceGame.h"
 
 @interface CarAnimationScene ()
 
@@ -19,11 +20,24 @@
 @property(nonatomic) BOOL timerStarted;
 @property(nonatomic) BOOL carAnimationStopped;
 
+@property(strong, nonatomic) AVAudioPlayer *highScoreSound;
+
 @end
 
 @implementation CarAnimationScene
 
 #define Max Car Speed 30
+
+- (AVAudioPlayer*)highScoreSound
+{
+    if(!_highScoreSound)
+    {
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Level Up Sound" ofType:@"mp3"]];
+        _highScoreSound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        [_highScoreSound prepareToPlay];
+    }
+    return _highScoreSound;
+}
 
 #pragma mark - Scene Life Cycle
 - (void)didMoveToView:(SKView *)view
@@ -53,18 +67,36 @@
         self.timerStarted = YES;
     } else if(self.carAnimationStopped && self.background.scrollingSpeed > 0)
     {
-        self.background.scrollingSpeed -= 0.1; // gradually slow down the car
+        
+        self.background.scrollingSpeed -= 0.2; // gradually slow down the car
 
     } else if(self.background.scrollingSpeed < 0)
     {
         self.background.scrollingSpeed = 0.0;
         [self.car removeAllActions];
-        if([self.delegate respondsToSelector:@selector(animationFinished:)])
+        
+        if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue] andStoreLevelUpInfo:NO])
         {
-            [(NSObject*)self.delegate performSelectorOnMainThread:@selector(animationFinished:) withObject:self waitUntilDone:NO];
+            [self.car addChild:[self getSpark]];
+            [self.highScoreSound play];
+            [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(sparkDone:) userInfo:nil repeats:NO];
+        } else
+        {
+            if([self.delegate respondsToSelector:@selector(animationFinished:)])
+            {
+                [(NSObject*)self.delegate performSelectorOnMainThread:@selector(animationFinished:) withObject:self waitUntilDone:NO];
+            }
         }
     }
     [self.background update:currentTime];
+}
+
+- (void)sparkDone:(NSTimer*)timer
+{
+    if([self.delegate respondsToSelector:@selector(animationFinished:)])
+    {
+        [(NSObject*)self.delegate performSelectorOnMainThread:@selector(animationFinished:) withObject:self waitUntilDone:NO];
+    }
 }
 
 #pragma mark - Setters and Getters
@@ -95,6 +127,16 @@
     SKEmitterNode *smoke = [NSKeyedUnarchiver unarchiveObjectWithFile:particlePath];
     
     return smoke;
+}
+
+- (SKEmitterNode*)getSpark
+{
+    NSString *particlePath = [[NSBundle mainBundle] pathForResource:@"Level Up Effect" ofType:@"sks"];
+    SKEmitterNode *spark = [NSKeyedUnarchiver unarchiveObjectWithFile:particlePath];
+    
+    spark.numParticlesToEmit = 500;
+    
+    return spark;
 }
 
 #pragma mark - Animation
@@ -143,6 +185,7 @@
 
 - (void)stopCarAnimation:(NSTimer *)timer
 {
+    NSLog(@"Stopped");
     self.carAnimationStopped = YES;
     self.carAnimationStarted = NO;
     self.gasGauge.needleDoneMoving = NO;

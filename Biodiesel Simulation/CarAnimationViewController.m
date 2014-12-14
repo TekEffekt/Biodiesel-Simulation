@@ -14,22 +14,9 @@
 
 @interface CarAnimationViewController () <CarAnimationController>
 
-@property(strong, nonatomic) AVAudioPlayer *highScoreSound;
-
 @end
 
 @implementation CarAnimationViewController
-
-- (AVAudioPlayer*)highScoreSound
-{
-    if(!_highScoreSound)
-    {
-        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Level Up Sound" ofType:@"mp3"]];
-        _highScoreSound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-        [_highScoreSound prepareToPlay];
-    }
-    return _highScoreSound;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,7 +38,7 @@
 
 - (void)animationFinished:(CarAnimationScene*)scene
 {
-    if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue]])
+    if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue] andStoreLevelUpInfo:YES])
     {
         int currentLevel = [CarDistanceGame getHighestUnlockedLevel];
         
@@ -65,7 +52,6 @@
         [levelUpAlert addAction: okAction];
         
         [self presentViewController:levelUpAlert animated:YES completion:nil];
-        [self.highScoreSound play];
     } else
     {
         [self displayGameResults];

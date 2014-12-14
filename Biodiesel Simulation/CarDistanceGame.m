@@ -43,7 +43,7 @@
     return highestUnlockedLevel;
 }
 
-+ (BOOL)checkDistanceForLevelUp:(CGFloat)distance
++ (BOOL)checkDistanceForLevelUp:(CGFloat)distance andStoreLevelUpInfo:(BOOL)shouldStore
 {
     BOOL shouldLevelUp = NO;
     int currentLevel = 1;
@@ -61,7 +61,10 @@
         shouldLevelUp = YES;
     }
     
-    [[NSUserDefaults standardUserDefaults] setInteger:currentLevel forKey:@"Highest Unlocked Level"];
+    if(shouldStore)
+    {
+        [[NSUserDefaults standardUserDefaults] setInteger:currentLevel forKey:@"Highest Unlocked Level"];
+    }
     
     return shouldLevelUp;
 }

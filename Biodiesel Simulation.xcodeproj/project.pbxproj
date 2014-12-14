@@ -37,6 +37,8 @@
 		B620872B1A3C2BE6003691D1 /* SmartSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = B620870D1A3C2BE6003691D1 /* SmartSlider.m */; };
 		B620872C1A3C2BE6003691D1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B620870E1A3C2BE6003691D1 /* spark.png */; };
 		B620872D1A3C2BE6003691D1 /* TheSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087101A3C2BE6003691D1 /* TheSimulation.m */; };
+		B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */ = {isa = PBXBuildFile; fileRef = B6397E381A3D31B100915853 /* Level Up Effect.sks */; };
+		B6397E3C1A3D5A8300915853 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,9 @@
 		B620870E1A3C2BE6003691D1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		B620870F1A3C2BE6003691D1 /* TheSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSimulation.h; sourceTree = "<group>"; };
 		B62087101A3C2BE6003691D1 /* TheSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheSimulation.m; sourceTree = "<group>"; };
+		B6397E381A3D31B100915853 /* Level Up Effect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level Up Effect.sks"; sourceTree = "<group>"; };
+		B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,8 @@
 				B62087091A3C2BE6003691D1 /* SimulationOperation.m */,
 				B620870C1A3C2BE6003691D1 /* SmartSlider.h */,
 				B620870D1A3C2BE6003691D1 /* SmartSlider.m */,
+				B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */,
+				B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */,
 				B62086E31A3C2BE5003691D1 /* Base.lproj */,
 				B620872F1A3C2D1D003691D1 /* Sprite Kit */,
 				B62087311A3C2E68003691D1 /* View Controllers */,
@@ -190,6 +197,7 @@
 				B62086EF1A3C2BE5003691D1 /* GasGaugeNode.h */,
 				B62086F01A3C2BE5003691D1 /* GasGaugeNode.m */,
 				B62086F91A3C2BE5003691D1 /* MyParticle.sks */,
+				B6397E381A3D31B100915853 /* Level Up Effect.sks */,
 				B62087061A3C2BE6003691D1 /* ScrollingNode.h */,
 				B62087071A3C2BE6003691D1 /* ScrollingNode.m */,
 			);
@@ -342,6 +350,7 @@
 				B62087191A3C2BE6003691D1 /* Images.xcassets in Resources */,
 				B62087141A3C2BE6003691D1 /* car.atlas in Resources */,
 				B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */,
+				B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */,
 				B620871A1A3C2BE6003691D1 /* Info.plist in Resources */,
 				B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */,
 				B62087201A3C2BE6003691D1 /* page1.jpg in Resources */,
@@ -363,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6397E3C1A3D5A8300915853 /* CustomIOS7AlertView.m in Sources */,
 				B620872D1A3C2BE6003691D1 /* TheSimulation.m in Sources */,
 				B620872A1A3C2BE6003691D1 /* SimulationViewController.m in Sources */,
 				B62087281A3C2BE6003691D1 /* ScrollingNode.m in Sources */,
@@ -570,6 +580,7 @@
 				B62086D31A3C2824003691D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B62086D41A3C2824003691D1 /* Build configuration list for PBXNativeTarget "Biodiesel SimulationTests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +589,7 @@
 				B62086D61A3C2824003691D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
