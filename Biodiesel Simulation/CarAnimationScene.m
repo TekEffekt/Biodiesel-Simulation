@@ -53,21 +53,24 @@
 
 - (void)update:(NSTimeInterval)currentTime
 {
-    if(self.gasGauge.needleDoneMoving && !self.carAnimationStarted)
+    if(self.gasGauge.needleDoneMoving && !self.carAnimationStarted && !self.timerStarted)
     {
         [self startCarAnimation];
         self.carAnimationStarted = YES;
-    } else if(self.carAnimationStarted && self.background.scrollingSpeed < 30)
+        NSLog(@"starting");
+    } else if(self.carAnimationStarted && self.background.scrollingSpeed < 30 && !self.timerStarted)
     {
+        NSLog(@"Speeding up");
         self.background.scrollingSpeed += 0.5; // gradually speed up the car
     } else if(self.background.scrollingSpeed >= 30 && !self.timerStarted)
     {
+        NSLog(@"run distance");
         [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(stopCarAnimation:) userInfo:nil repeats:NO];
         [self.gasGauge moveGaugeToAngle:M_PI/2 withDuration:6.0];
         self.timerStarted = YES;
     } else if(self.carAnimationStopped && self.background.scrollingSpeed > 0)
     {
-        
+        NSLog(@"Slowing");
         self.background.scrollingSpeed -= 0.2; // gradually slow down the car
 
     } else if(self.background.scrollingSpeed < 0)

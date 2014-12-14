@@ -47,6 +47,7 @@
     }
     
     self.levelLabel.text = level;
+    self.levelLabel.textColor = [UIColor orangeColor];
     self.distanceLabel.text = [NSString stringWithFormat:@"%i miles", [self.gameResults[@"Distance"] intValue]];
     self.costLabel.text = price;
     self.gallonsLabel.text = [NSString stringWithFormat:@"%i gallons", [self.gameResults[@"Gallons"] intValue]];

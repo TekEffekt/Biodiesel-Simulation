@@ -42,16 +42,34 @@
     {
         int currentLevel = [CarDistanceGame getHighestUnlockedLevel];
         
-        UIAlertController *levelUpAlert =
-        [UIAlertController alertControllerWithTitle:@"Congrats!"
-                                            message: [NSString stringWithFormat:@"You leveled up to level %i!", currentLevel]
-                                     preferredStyle:UIAlertControllerStyleAlert];
+        UIView *outerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 160)];
         
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){ [self displayGameResults]; }];
+        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 270, 150)];
+        background.center = outerView.center;
+        background.image = [UIImage imageNamed:@"flowerBackground"];
         
-        [levelUpAlert addAction: okAction];
+        UILabel *levelUpLabel = [[UILabel alloc] init];
+        levelUpLabel.text = [NSString stringWithFormat:@"You leveled up to level %i!", currentLevel];
+        levelUpLabel.frame = CGRectMake(0, 0, 250, 150);
+        levelUpLabel.center = outerView.center;
+        levelUpLabel.textAlignment = NSTextAlignmentCenter;
+        levelUpLabel.backgroundColor = [UIColor clearColor];
+        levelUpLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:22];
         
-        [self presentViewController:levelUpAlert animated:YES completion:nil];
+        [background addSubview:levelUpLabel];
+        [outerView addSubview:background];
+        
+        CustomIOS7AlertView *levelUpAlert = [[CustomIOS7AlertView alloc] init];
+        
+        [levelUpAlert setContainerView:outerView];
+        [levelUpAlert setButtonTitles:@[@"Next"]];
+        
+        [levelUpAlert setOnButtonTouchUpInside:^(CustomIOS7AlertView *alertView, int buttonIndex) {
+            [self displayGameResults];
+        }];
+        
+        [levelUpAlert show];
+        
     } else
     {
         [self displayGameResults];
