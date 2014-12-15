@@ -81,6 +81,7 @@
     slider.previousValue = slider.value;
     
     self.litIcon.tintColor = [UIColor blackColor];
+    [self makeViewNotGlow:self.litIcon];
     
     if(sender.state == UIGestureRecognizerStateBegan || sender.state == UIGestureRecognizerStateChanged)
     {
@@ -139,6 +140,7 @@
         }
         self.litIcon.image = [self.litIcon.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [self.litIcon setTintColor:self.view.tintColor];
+        [self makeViewGlow:self.litIcon];
     } else if(sender.state == UIGestureRecognizerStateEnded)
     {
         self.litIcon.tintColor = [UIColor blackColor];
@@ -199,6 +201,9 @@
     [self enableAppropriateOilButtons];
     
     self.justLoaded = NO;
+    [self makeViewNotGlow:self.smallOil];
+    [self makeViewNotGlow:self.mediumOil];
+    [self makeViewNotGlow:self.bigOil];
     
     if(sender.view == self.smallOil)
     {
@@ -213,6 +218,8 @@
         self.oil = 15;
         self.bigOil.tintColor = self.view.tintColor;
     }
+    
+    [self makeViewGlow:sender.view];
     
     [self.tableView headerViewForSection:5].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:5];
 }
@@ -250,6 +257,25 @@
         self.smallOil.tintColor = [UIColor blackColor];
         self.smallOil.userInteractionEnabled = YES;
     }
+}
+
+- (void)makeViewGlow:(UIView*)view
+{
+    UIColor *color = self.view.tintColor;
+    view.layer.shadowColor = [color CGColor];
+    view.layer.shadowRadius = 5.0f;
+    view.layer.shadowOpacity = 0.9;
+    view.layer.shadowOffset = CGSizeZero;
+    view.layer.masksToBounds = NO;
+}
+
+- (void)makeViewNotGlow:(UIView*)view
+{
+    UIColor *color = [UIColor clearColor];
+    view.layer.shadowColor = [color CGColor];
+    view.layer.shadowRadius = 5.0f;
+    view.layer.shadowOpacity = 0.0;
+    view.layer.shadowOffset = CGSizeZero;
 }
 
 # pragma mark - MVC Lifecycle
