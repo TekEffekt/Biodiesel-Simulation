@@ -11,7 +11,7 @@
 #import "ScrollingNode.h"
 #import "CarDistanceGame.h"
 
-@interface CarAnimationScene ()
+@interface CarAnimationScene () <AVAudioPlayerDelegate>
 
 @property(strong, nonatomic) ScrollingNode *background;
 @property(strong, nonatomic) GasGaugeNode *gasGauge;
@@ -21,6 +21,8 @@
 @property(nonatomic) BOOL carAnimationStopped;
 
 @property(strong, nonatomic) AVAudioPlayer *highScoreSound;
+@property(strong, nonatomic) AVAudioPlayer *carStartSound;
+@property(strong, nonatomic) AVAudioPlayer *driveAwaySound;
 
 @end
 
@@ -36,7 +38,33 @@
         _highScoreSound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         [_highScoreSound prepareToPlay];
     }
+    
     return _highScoreSound;
+}
+
+- (AVAudioPlayer*)carStartSound
+{
+    if(!_carStartSound)
+    {
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"carStart" ofType:@"mp3"]];
+        _carStartSound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        _carStartSound.delegate = self;
+        [_carStartSound prepareToPlay];
+    }
+    
+    return _carStartSound;
+}
+
+- (AVAudioPlayer*)driveAwaySound
+{
+    if(!_driveAwaySound)
+    {
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"carDriveOff" ofType:@"mp3"]];
+        _driveAwaySound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error: nil];
+        [_driveAwaySound prepareToPlay];
+    }
+    
+    return _driveAwaySound;
 }
 
 #pragma mark - Scene Life Cycle
@@ -55,23 +83,20 @@
 {
     if(self.gasGauge.needleDoneMoving && !self.carAnimationStarted && !self.timerStarted)
     {
-        [self startCarAnimation];
-        self.carAnimationStarted = YES;
+        self.gasGauge.needleDoneMoving = NO;
+        [self.carStartSound play];
         NSLog(@"starting");
-    } else if(self.carAnimationStarted && self.background.scrollingSpeed < 30 && !self.timerStarted)
+    } else if(self.carAnimationStarted && self.background.scrollingSpeed < 60)
     {
         NSLog(@"Speeding up");
-        self.background.scrollingSpeed += 0.5; // gradually speed up the car
-    } else if(self.background.scrollingSpeed >= 30 && !self.timerStarted)
-    {
-        NSLog(@"run distance");
+        self.background.scrollingSpeed *= 1.05; // gradually speed up the car
         [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(stopCarAnimation:) userInfo:nil repeats:NO];
         [self.gasGauge moveGaugeToAngle:M_PI/2 withDuration:6.0];
         self.timerStarted = YES;
     } else if(self.carAnimationStopped && self.background.scrollingSpeed > 0)
     {
         NSLog(@"Slowing");
-        self.background.scrollingSpeed -= 0.2; // gradually slow down the car
+        self.background.scrollingSpeed -= 0.35; // gradually slow down the car
 
     } else if(self.background.scrollingSpeed < 0)
     {
@@ -167,6 +192,7 @@
     [self addChild:self.gasGauge];
     
     self.background.scrollingSpeed = 1;
+    self.carAnimationStarted = YES;
 }
 
 - (CGFloat)getAngleForGas:(CGFloat)gallonsOfGas
@@ -181,9 +207,9 @@
     CGFloat gas = [self.gameResults[@"Gallons"] floatValue];
     CGFloat angle = [self getAngleForGas:gas];
     
-    NSLog(@"%f", angle);
+    NSLog(@"%f", [self.gameResults[@"Gallons"] floatValue]/80.0);
                      
-    [self.gasGauge moveGaugeToAngle:angle withDuration:2.5];
+    [self.gasGauge moveGaugeToAngle:angle withDuration:[self.gameResults[@"Gallons"] floatValue]/80.0];
 }
 
 - (void)stopCarAnimation:(NSTimer *)timer
@@ -197,6 +223,16 @@
     [self addChild:self.background];
     [self addChild:self.car];
     [self addChild:self.gasGauge];
+}
+
+#pragma mark - Audio Methods
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    if(player == self.carStartSound)
+    {
+        [self startCarAnimation];
+        [self.driveAwaySound play];
+    }
 }
 
 @end

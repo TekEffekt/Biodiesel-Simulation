@@ -39,6 +39,8 @@
 		B620872D1A3C2BE6003691D1 /* TheSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087101A3C2BE6003691D1 /* TheSimulation.m */; };
 		B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */ = {isa = PBXBuildFile; fileRef = B6397E381A3D31B100915853 /* Level Up Effect.sks */; };
 		B6397E3C1A3D5A8300915853 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */; };
+		B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA541A3F6F21008E2756 /* carStart.mp3 */; };
+		B6BFAA571A3F7608008E2756 /* carDriveOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		B6397E381A3D31B100915853 /* Level Up Effect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level Up Effect.sks"; sourceTree = "<group>"; };
 		B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		B6BFAA541A3F6F21008E2756 /* carStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carStart.mp3; sourceTree = "<group>"; };
+		B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carDriveOff.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 				B62086E11A3C2BE5003691D1 /* AppDelegate.h */,
 				B62086E21A3C2BE5003691D1 /* AppDelegate.m */,
 				B62086F21A3C2BE5003691D1 /* Info.plist */,
+				B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */,
+				B6BFAA541A3F6F21008E2756 /* carStart.mp3 */,
 				B62086F51A3C2BE5003691D1 /* Level Up Sound.mp3 */,
 				B62086F81A3C2BE5003691D1 /* main.m */,
 			);
@@ -349,12 +355,14 @@
 				B62087221A3C2BE6003691D1 /* page3.jpg in Resources */,
 				B62087191A3C2BE6003691D1 /* Images.xcassets in Resources */,
 				B62087141A3C2BE6003691D1 /* car.atlas in Resources */,
+				B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */,
 				B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */,
 				B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */,
 				B620871A1A3C2BE6003691D1 /* Info.plist in Resources */,
 				B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */,
 				B62087201A3C2BE6003691D1 /* page1.jpg in Resources */,
 				B62087131A3C2BE6003691D1 /* Main.storyboard in Resources */,
+				B6BFAA571A3F7608008E2756 /* carDriveOff.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
