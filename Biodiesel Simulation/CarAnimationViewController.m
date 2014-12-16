@@ -46,12 +46,13 @@
         
         UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 270, 150)];
         background.center = outerView.center;
-        background.image = [UIImage imageNamed:@"flowerBackground"];
+        background.image = [UIImage imageNamed:@"flowerBackground2"];
         
         UILabel *levelUpLabel = [[UILabel alloc] init];
         levelUpLabel.text = [NSString stringWithFormat:@"You leveled up to level %i!", currentLevel];
         levelUpLabel.frame = CGRectMake(0, 0, 250, 150);
-        levelUpLabel.center = outerView.center;
+        levelUpLabel.center = background.center;
+        //levelUpLabel.textColor = [UIColor whiteColor];
         levelUpLabel.textAlignment = NSTextAlignmentCenter;
         levelUpLabel.backgroundColor = [UIColor clearColor];
         levelUpLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:22];

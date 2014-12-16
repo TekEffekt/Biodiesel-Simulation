@@ -11,14 +11,15 @@
 @implementation CarDistanceGame
 
 #define LEVEL_TWO_DISTANCE 90
-#define LEVEL_THREE_DISTANCE 223
+#define LEVEL_THREE_DISTANCE 144
+#define LEVEL_FOUR_DISTANCE 223
+#define LEVEL_FIVE_DISTANCE 279
 
 + (NSDictionary*)computeTheDistanceWithFuel:(NSDictionary *)fuel
 {
     double wallet = 50; // the amount of money available to buy fuel
     double pricePerGallon = [(NSNumber*)fuel[@"Cost"] doubleValue];
     double effeciency = [(NSNumber*)fuel[@"Eout"] doubleValue] / 10;
-#warning Smoking with below 95% conversion
     
     double gallons = wallet / pricePerGallon;
     
@@ -48,7 +49,13 @@
     BOOL shouldLevelUp = NO;
     int currentLevel = 1;
     
-    if(distance > LEVEL_THREE_DISTANCE)
+    if(distance > LEVEL_FIVE_DISTANCE)
+    {
+        currentLevel = 5;
+    } else if(distance > LEVEL_FOUR_DISTANCE)
+    {
+        currentLevel = 4;
+    } else if(distance > LEVEL_THREE_DISTANCE)
     {
         currentLevel = 3;
     } else if(distance > LEVEL_TWO_DISTANCE)

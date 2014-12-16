@@ -513,11 +513,25 @@
                                                         <outletCollection property="gestureRecognizers" destination="dQa-RK-sYa" appends="YES" id="eJc-uW-ywM"/>
                                                     </connections>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small-Medium Oil" translatesAutoresizingMaskIntoConstraints="NO" id="l73-HN-yWR">
+                                                    <rect key="frame" x="72" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="B3V-3e-Gv3" appends="YES" id="viQ-Fe-dgY"/>
+                                                    </connections>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Medium Oil" translatesAutoresizingMaskIntoConstraints="NO" id="8Ve-Qf-Yu4">
                                                     <rect key="frame" x="143" y="5" width="35" height="35"/>
                                                     <gestureRecognizers/>
                                                     <connections>
                                                         <outletCollection property="gestureRecognizers" destination="SpG-rS-uNT" appends="YES" id="zyT-ss-N3a"/>
+                                                    </connections>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Medium-Big Oil" translatesAutoresizingMaskIntoConstraints="NO" id="O7y-Al-ctr">
+                                                    <rect key="frame" x="210" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="HL5-LL-qbH" appends="YES" id="usW-bO-nia"/>
                                                     </connections>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Big Oil" translatesAutoresizingMaskIntoConstraints="NO" id="prl-5k-8bZ">
@@ -624,12 +638,14 @@
                         <outlet property="bigTime" destination="atV-0A-HRS" id="opH-eV-DUG"/>
                         <outlet property="bigTime2" destination="RJC-m1-oBC" id="1vI-AL-f9P"/>
                         <outlet property="catalystSlider" destination="awn-hM-mMj" id="AHi-4h-PHp"/>
+                        <outlet property="mediumBigOil" destination="O7y-Al-ctr" id="eL4-cj-daZ"/>
                         <outlet property="mediumOil" destination="8Ve-Qf-Yu4" id="sKN-v8-goP"/>
                         <outlet property="methanolSlider" destination="Xix-Wx-BUk" id="QMN-rs-lvU"/>
                         <outlet property="mixingLengthSlider" destination="6hr-HL-r5I" id="Owt-Ff-umx"/>
                         <outlet property="settlingTimeSlider" destination="3tw-GI-Yfz" id="QMM-L1-bwb"/>
                         <outlet property="smallDroplet" destination="vQR-If-66A" id="zQ1-6J-Vib"/>
                         <outlet property="smallDroplet2" destination="OA8-hl-XV2" id="6cl-gy-6GV"/>
+                        <outlet property="smallMediumOil" destination="l73-HN-yWR" id="MN8-lU-GRk"/>
                         <outlet property="smallOil" destination="o5e-by-9bG" id="bj6-fb-0GI"/>
                         <outlet property="smallThermometer" destination="HTP-rP-kYL" id="flz-tf-sb0"/>
                         <outlet property="smallTime" destination="Q0l-jB-7CZ" id="ILJ-JW-wdG"/>
@@ -678,6 +694,16 @@
                 <tapGestureRecognizer id="SQD-o0-NX6">
                     <connections>
                         <action selector="oilButtonPressed:" destination="OKH-TR-YXk" id="AXC-sZ-lMr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="B3V-3e-Gv3">
+                    <connections>
+                        <action selector="oilButtonPressed:" destination="OKH-TR-YXk" id="FeQ-4w-jBS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="HL5-LL-qbH">
+                    <connections>
+                        <action selector="oilButtonPressed:" destination="OKH-TR-YXk" id="Duy-Cm-mA0"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1056,10 +1082,12 @@
         <image name="Big Thermometer" width="48" height="48"/>
         <image name="Few Droplets" width="42" height="51"/>
         <image name="Medium Oil" width="50" height="50"/>
+        <image name="Medium-Big Oil" width="50" height="50"/>
         <image name="Small Droplet" width="48" height="48"/>
         <image name="Small Oil" width="50" height="50"/>
         <image name="Small Thermometer" width="48" height="48"/>
         <image name="Small Time" width="75" height="75"/>
+        <image name="Small-Medium Oil" width="50" height="50"/>
         <image name="time" width="58" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>

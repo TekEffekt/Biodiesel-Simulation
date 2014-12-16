@@ -28,7 +28,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bigThermometer;
 
 @property (weak, nonatomic) IBOutlet UIImageView *smallOil;
+@property (weak, nonatomic) IBOutlet UIImageView *smallMediumOil;
 @property (weak, nonatomic) IBOutlet UIImageView *mediumOil;
+@property (weak, nonatomic) IBOutlet UIImageView *mediumBigOil;
 @property (weak, nonatomic) IBOutlet UIImageView *bigOil;
 
 @property (weak, nonatomic) IBOutlet SmartSlider *methanolSlider;
@@ -202,24 +204,38 @@
     
     self.justLoaded = NO;
     [self makeViewNotGlow:self.smallOil];
+    [self makeViewNotGlow:self.smallMediumOil];
     [self makeViewNotGlow:self.mediumOil];
+    [self makeViewNotGlow:self.mediumBigOil];
     [self makeViewNotGlow:self.bigOil];
     
     if(sender.view == self.smallOil)
     {
         self.oil = 5;
         self.smallOil.tintColor = self.view.tintColor;
-    } else if(sender.view == self.mediumOil)
+    } else if(sender.view == self.smallMediumOil)
+    {
+        self.oil = 7.5;
+        self.smallMediumOil.tintColor = self.view.tintColor;
+    }
+    else if(sender.view == self.mediumOil)
     {
         self.oil = 10;
         self.mediumOil.tintColor = self.view.tintColor;
-    } else if(sender.view == self.bigOil)
+    } else if(sender.view == self.mediumBigOil)
+    {
+        self.oil = 12.5;
+        self.mediumBigOil.tintColor = self.view.tintColor;
+    }
+    else if(sender.view == self.bigOil)
     {
         self.oil = 15;
         self.bigOil.tintColor = self.view.tintColor;
     }
     
     [self makeViewGlow:sender.view];
+    
+    NSLog(@"%@", sender.view);
     
     [self.tableView headerViewForSection:5].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:5];
 }
@@ -231,32 +247,44 @@
        
     self.bigOil.image = [self.bigOil.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.bigOil setTintColor:[UIColor lightGrayColor]];
+    self.mediumBigOil.image = [self.mediumBigOil.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [self.mediumBigOil setTintColor:[UIColor lightGrayColor]];
     self.mediumOil.image = [self.mediumOil.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.mediumOil setTintColor:[UIColor lightGrayColor]];
+    self.smallMediumOil.image = [self.smallMediumOil.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [self.smallMediumOil setTintColor:[UIColor lightGrayColor]];
     self.smallOil.image = [self.smallOil.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.smallOil setTintColor:[UIColor lightGrayColor]];
     
     self.bigOil.userInteractionEnabled = NO;
+    self.mediumBigOil.userInteractionEnabled = NO;
     self.mediumOil.userInteractionEnabled = NO;
+    self.smallMediumOil.userInteractionEnabled = NO;
     self.smallOil.userInteractionEnabled = NO;
     
-    if(highestUnlockedLevel >= 3)
+    NSLog(@"%i", highestUnlockedLevel);
+    
+    for(int i = highestUnlockedLevel; i > 0; i--)
     {
-        self.bigOil.tintColor = [UIColor blackColor];
-        self.bigOil.userInteractionEnabled = YES;
+        switch(i)
+        {
+            case 5: self.bigOil.tintColor = [UIColor blackColor];
+                self.bigOil.userInteractionEnabled = YES; break;
+                
+            case 4: self.mediumBigOil.tintColor = [UIColor blackColor];
+                self.mediumBigOil.userInteractionEnabled = YES; break;
+                
+            case 3: self.mediumOil.tintColor = [UIColor blackColor];
+                self.mediumOil.userInteractionEnabled = YES; break;
+            
+            case 2: self.smallMediumOil.tintColor = [UIColor blackColor];
+                self.smallMediumOil.userInteractionEnabled = YES; break;
+            
+            case 1: self.smallOil.tintColor = [UIColor blackColor];
+                self.smallOil.userInteractionEnabled = YES; break;
+        }
     }
     
-    if(highestUnlockedLevel >= 2)
-    {
-        self.mediumOil.tintColor = [UIColor blackColor];
-        self.mediumOil.userInteractionEnabled = YES;
-    }
-    
-    if(highestUnlockedLevel >= 1)
-    {
-        self.smallOil.tintColor = [UIColor blackColor];
-        self.smallOil.userInteractionEnabled = YES;
-    }
 }
 
 - (void)makeViewGlow:(UIView*)view
