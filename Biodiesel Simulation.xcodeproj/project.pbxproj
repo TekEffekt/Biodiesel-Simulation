@@ -30,7 +30,6 @@
 		B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086FF1A3C2BE5003691D1 /* PageContentViewController.m */; };
 		B62087251A3C2BE6003691D1 /* RegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */; };
 		B62087261A3C2BE6003691D1 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */; };
-		B62087271A3C2BE6003691D1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087051A3C2BE6003691D1 /* RootViewController.m */; };
 		B62087281A3C2BE6003691D1 /* ScrollingNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087071A3C2BE6003691D1 /* ScrollingNode.m */; };
 		B62087291A3C2BE6003691D1 /* SimulationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087091A3C2BE6003691D1 /* SimulationOperation.m */; };
 		B620872A1A3C2BE6003691D1 /* SimulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B620870B1A3C2BE6003691D1 /* SimulationViewController.m */; };
@@ -41,6 +40,7 @@
 		B6397E3C1A3D5A8300915853 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */; };
 		B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA541A3F6F21008E2756 /* carStart.mp3 */; };
 		B6BFAA571A3F7608008E2756 /* carDriveOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */; };
+		B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +90,6 @@
 		B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterTableViewController.m; sourceTree = "<group>"; };
 		B62087021A3C2BE5003691D1 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTableViewController.h; sourceTree = "<group>"; };
 		B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTableViewController.m; sourceTree = "<group>"; };
-		B62087041A3C2BE5003691D1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		B62087051A3C2BE6003691D1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		B62087061A3C2BE6003691D1 /* ScrollingNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingNode.h; sourceTree = "<group>"; };
 		B62087071A3C2BE6003691D1 /* ScrollingNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingNode.m; sourceTree = "<group>"; };
 		B62087081A3C2BE6003691D1 /* SimulationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulationOperation.h; sourceTree = "<group>"; };
@@ -108,6 +106,8 @@
 		B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		B6BFAA541A3F6F21008E2756 /* carStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carStart.mp3; sourceTree = "<group>"; };
 		B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carDriveOff.mp3; sourceTree = "<group>"; };
+		B6F71D491A4140C400162FD0 /* UIView+Glow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glow.h"; sourceTree = "<group>"; };
+		B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +155,8 @@
 				B620870D1A3C2BE6003691D1 /* SmartSlider.m */,
 				B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */,
 				B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */,
+				B6F71D491A4140C400162FD0 /* UIView+Glow.h */,
+				B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */,
 				B62086E31A3C2BE5003691D1 /* Base.lproj */,
 				B620872F1A3C2D1D003691D1 /* Sprite Kit */,
 				B62087311A3C2E68003691D1 /* View Controllers */,
@@ -237,8 +239,6 @@
 				B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */,
 				B62087021A3C2BE5003691D1 /* ResultsTableViewController.h */,
 				B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */,
-				B62087041A3C2BE5003691D1 /* RootViewController.h */,
-				B62087051A3C2BE6003691D1 /* RootViewController.m */,
 				B620870A1A3C2BE6003691D1 /* SimulationViewController.h */,
 				B620870B1A3C2BE6003691D1 /* SimulationViewController.m */,
 			);
@@ -382,12 +382,12 @@
 			files = (
 				B6397E3C1A3D5A8300915853 /* CustomIOS7AlertView.m in Sources */,
 				B620872D1A3C2BE6003691D1 /* TheSimulation.m in Sources */,
+				B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */,
 				B620872A1A3C2BE6003691D1 /* SimulationViewController.m in Sources */,
 				B62087281A3C2BE6003691D1 /* ScrollingNode.m in Sources */,
 				B620872B1A3C2BE6003691D1 /* SmartSlider.m in Sources */,
 				B62087161A3C2BE6003691D1 /* CarAnimationViewController.m in Sources */,
 				B62087181A3C2BE6003691D1 /* GasGaugeNode.m in Sources */,
-				B62087271A3C2BE6003691D1 /* RootViewController.m in Sources */,
 				B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */,
 				B620871D1A3C2BE6003691D1 /* LogInTableViewController.m in Sources */,
 				B62087151A3C2BE6003691D1 /* CarAnimationScene.m in Sources */,

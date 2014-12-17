@@ -11,6 +11,7 @@
 #import "SmartSlider.h"
 #import "CarDistanceGame.h"
 #import "PageContentViewController.h"
+#import "UIView+Glow.h"
 
 @interface InputDataTableViewController () <UIPageViewControllerDataSource>
 
@@ -142,7 +143,7 @@
         }
         self.litIcon.image = [self.litIcon.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         [self.litIcon setTintColor:self.view.tintColor];
-        [self makeViewGlow:self.litIcon];
+        [self makeViewGlow:self.litIcon color:self.view.tintColor];
     } else if(sender.state == UIGestureRecognizerStateEnded)
     {
         self.litIcon.tintColor = [UIColor blackColor];
@@ -233,9 +234,8 @@
         self.bigOil.tintColor = self.view.tintColor;
     }
     
-    [self makeViewGlow:sender.view];
-    
-    NSLog(@"%@", sender.view);
+    [self makeViewGlow:sender.view color:self.view.tintColor];
+    [sender.view stopGlowing];
     
     [self.tableView headerViewForSection:5].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:5];
 }
@@ -262,8 +262,6 @@
     self.smallMediumOil.userInteractionEnabled = NO;
     self.smallOil.userInteractionEnabled = NO;
     
-    NSLog(@"%i", highestUnlockedLevel);
-    
     for(int i = highestUnlockedLevel; i > 0; i--)
     {
         switch(i)
@@ -287,9 +285,8 @@
     
 }
 
-- (void)makeViewGlow:(UIView*)view
+- (void)makeViewGlow:(UIView*)view color:(UIColor*)color
 {
-    UIColor *color = self.view.tintColor;
     view.layer.shadowColor = [color CGColor];
     view.layer.shadowRadius = 5.0f;
     view.layer.shadowOpacity = 0.9;
@@ -304,6 +301,43 @@
     view.layer.shadowRadius = 5.0f;
     view.layer.shadowOpacity = 0.0;
     view.layer.shadowOffset = CGSizeZero;
+}
+
+- (void)playUnlockEffect:(int)oilToUnlock
+{
+    UIImageView *oilToGlow;
+    
+    switch(oilToUnlock)
+    {
+        case 1: oilToGlow = self.smallOil; break;
+        case 2: oilToGlow = self.smallMediumOil; break;
+        case 3: oilToGlow = self.mediumOil; break;
+        case 4: oilToGlow = self.mediumBigOil; break;
+        case 5: oilToGlow = self.bigOil; break;
+    }
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:1];
+    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    
+    [self makeViewGlow:oilToGlow color:[UIColor orangeColor]];
+    [oilToGlow startGlowingWithColor:[UIColor orangeColor] intensity:2.0];
+    
+    NSIndexPath *path2 = [NSIndexPath indexPathForRow:0 inSection:7];
+    [self.tableView scrollToRowAtIndexPath:path2 atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Just Unlocked Level"];
+}
+
+- (void)displayLevelUpMessage
+{
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Congrats!" message:[NSString stringWithFormat:@"You unlocked a new level of gas!"] preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self playUnlockEffect:[CarDistanceGame getHighestUnlockedLevel]];
+    }];
+    
+    [controller addAction:action];
+    
+    [self presentViewController:controller animated:NO completion: nil];
 }
 
 # pragma mark - MVC Lifecycle
@@ -321,6 +355,22 @@
     [self enableAppropriateOilButtons];
     
     [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Faded In"];
+    
+    if([CarDistanceGame getHighestUnlockedLevel] == 2 && [[NSUserDefaults standardUserDefaults] valueForKey:@"Just Unlocked Level"])
+    {
+        [self displayLevelUpMessage];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"Just Unlocked Level"] && [CarDistanceGame getHighestUnlockedLevel] != 2)
+    {
+        [self playUnlockEffect:[CarDistanceGame getHighestUnlockedLevel]];
+    }
+
 }
 
 - (void)viewDidLoad
@@ -438,7 +488,7 @@
     }];
 }
 
-#pragma mark - Data
+#pragma mark - Simulation
 
 - (NSDictionary*)gatherDataForSimulation
 {

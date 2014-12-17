@@ -395,32 +395,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Initial Catalyst" id="BQ3-3y-sz8">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6p4-Is-kKq">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6p4-Is-kKq" id="5um-w9-skI">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="awn-hM-mMj" customClass="SmartSlider">
-                                                    <rect key="frame" x="43" y="7" width="235" height="31"/>
-                                                    <gestureRecognizers/>
-                                                    <connections>
-                                                        <action selector="sliderValueChanged:" destination="OKH-TR-YXk" eventType="valueChanged" id="Uc5-0F-huW"/>
-                                                        <outletCollection property="gestureRecognizers" destination="I1m-qq-NdZ" appends="YES" id="5D2-e2-8Iw"/>
-                                                    </connections>
-                                                </slider>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Droplet" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-hl-XV2">
-                                                    <rect key="frame" x="2" y="4" width="35" height="35"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Few Droplets" translatesAutoresizingMaskIntoConstraints="NO" id="22c-Cu-6i2">
-                                                    <rect key="frame" x="284" y="4" width="35" height="35"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Temperature" id="N8c-Bf-Nmq">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="pvU-rP-a3T">
@@ -440,6 +414,32 @@
                                                     <rect key="frame" x="2" y="4" width="35" height="35"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Big Thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="DFk-GU-hub">
+                                                    <rect key="frame" x="284" y="4" width="35" height="35"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Initial Catalyst" id="BQ3-3y-sz8">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6p4-Is-kKq">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6p4-Is-kKq" id="5um-w9-skI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="awn-hM-mMj" customClass="SmartSlider">
+                                                    <rect key="frame" x="43" y="7" width="235" height="31"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <action selector="sliderValueChanged:" destination="OKH-TR-YXk" eventType="valueChanged" id="Uc5-0F-huW"/>
+                                                        <outletCollection property="gestureRecognizers" destination="I1m-qq-NdZ" appends="YES" id="5D2-e2-8Iw"/>
+                                                    </connections>
+                                                </slider>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Droplet" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-hl-XV2">
+                                                    <rect key="frame" x="2" y="4" width="35" height="35"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Few Droplets" translatesAutoresizingMaskIntoConstraints="NO" id="22c-Cu-6i2">
                                                     <rect key="frame" x="284" y="4" width="35" height="35"/>
                                                 </imageView>
                                             </subviews>

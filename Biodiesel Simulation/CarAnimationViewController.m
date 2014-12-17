@@ -40,11 +40,13 @@
 {
     if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue] andStoreLevelUpInfo:YES])
     {
+        [[NSUserDefaults standardUserDefaults] setValue:@"Unlocked" forKey:@"Just Unlocked Level"];
+        
         int currentLevel = [CarDistanceGame getHighestUnlockedLevel];
         
         UIView *outerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 160)];
         
-        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 270, 150)];
+        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 275, 155)];
         background.center = outerView.center;
         background.image = [UIImage imageNamed:@"flowerBackground2"];
         

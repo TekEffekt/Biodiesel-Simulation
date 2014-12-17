@@ -11,9 +11,9 @@
 @implementation CarDistanceGame
 
 #define LEVEL_TWO_DISTANCE 90
-#define LEVEL_THREE_DISTANCE 144
+#define LEVEL_THREE_DISTANCE 143
 #define LEVEL_FOUR_DISTANCE 223
-#define LEVEL_FIVE_DISTANCE 279
+#define LEVEL_FIVE_DISTANCE 278
 
 + (NSDictionary*)computeTheDistanceWithFuel:(NSDictionary *)fuel
 {
