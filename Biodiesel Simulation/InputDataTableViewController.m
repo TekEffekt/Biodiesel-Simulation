@@ -42,7 +42,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *startSimulationButton;
 
-@property(nonatomic) BOOL justLoaded;
+@property(nonatomic) BOOL oilAmountNotChosen;
 
 // oil value stored in a property due to not being stored in a slider
 @property(nonatomic) CGFloat oil;
@@ -168,10 +168,10 @@
     } else if(section == 4)
     {
         header = [NSString stringWithFormat:@"SETTLING TIME: %i MINUTES", (int)self.mixingLengthSlider.value];
-    } else if(section == 5 && !self.justLoaded)
+    } else if(section == 5 && !self.oilAmountNotChosen)
     {
         header = [NSString stringWithFormat:@"INITIAL OIL: %i MOLES", (int)self.oil];
-    } else if(section == 5 && self.justLoaded)
+    } else if(section == 5 && self.oilAmountNotChosen)
     {
         header = @"INITIAL OIL: ??? MOLES";
     }
@@ -203,7 +203,7 @@
 {
     [self enableAppropriateOilButtons];
     
-    self.justLoaded = NO;
+    self.oilAmountNotChosen = NO;
     [self makeViewNotGlow:self.smallOil];
     [self makeViewNotGlow:self.smallMediumOil];
     [self makeViewNotGlow:self.mediumOil];
@@ -234,8 +234,14 @@
         self.bigOil.tintColor = self.view.tintColor;
     }
     
+    NSArray *buttons = @[self.smallOil, self.smallMediumOil, self.mediumOil, self.mediumBigOil, self.bigOil];
+    
+    for(UIImageView *button in buttons)
+    {
+        [button stopGlowing];
+    }
+    
     [self makeViewGlow:sender.view color:self.view.tintColor];
-    [sender.view stopGlowing];
     
     [self.tableView headerViewForSection:5].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:5];
 }
@@ -315,6 +321,7 @@
         case 4: oilToGlow = self.mediumBigOil; break;
         case 5: oilToGlow = self.bigOil; break;
     }
+    
     NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:1];
     [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionTop animated:NO];
     
@@ -377,7 +384,7 @@
 {
     [super viewDidLoad];
     self.oil = 5;
-    self.justLoaded = YES;
+    self.oilAmountNotChosen = YES;
 }
 
 #pragma mark - Tutorial
@@ -513,6 +520,26 @@
            simulationViewController.simulationData = [self gatherDataForSimulation];
        }
 }
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    BOOL should = YES;
+    
+    if([identifier isEqualToString:@"To Simulation"] && self.oilAmountNotChosen)
+    {
+        should = NO;
+        
+        NSArray *buttons = @[self.smallOil, self.smallMediumOil, self.mediumOil, self.mediumBigOil, self.bigOil];
+        
+        for(UIImageView *button in buttons)
+        {
+            [button startGlowingWithColor:[UIColor orangeColor] intensity:1.0];
+        }
+    }
+    
+    return should;
+}
+
 - (IBAction)remove:(UIBarButtonItem *)sender
 {
     if(self.tutorialOn)
