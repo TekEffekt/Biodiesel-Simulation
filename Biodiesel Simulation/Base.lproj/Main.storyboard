@@ -384,11 +384,19 @@
                                                         <outletCollection property="gestureRecognizers" destination="wmb-LK-bJO" appends="YES" id="LGJ-dh-Tsy"/>
                                                     </connections>
                                                 </slider>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Droplet" translatesAutoresizingMaskIntoConstraints="NO" id="vQR-If-66A">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Droplet" translatesAutoresizingMaskIntoConstraints="NO" id="vQR-If-66A">
                                                     <rect key="frame" x="4" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="dfB-2e-qb1" appends="YES" id="RvZ-63-yMK"/>
+                                                    </connections>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Few Droplets" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-m9-57n">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Few Droplets" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-m9-57n">
                                                     <rect key="frame" x="281" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="UKd-dP-AkN" appends="YES" id="MyV-3W-km3"/>
+                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -410,11 +418,19 @@
                                                         <outletCollection property="gestureRecognizers" destination="Rpp-sA-gX2" appends="YES" id="mhb-Cc-lg6"/>
                                                     </connections>
                                                 </slider>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="HTP-rP-kYL">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="HTP-rP-kYL">
                                                     <rect key="frame" x="2" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="cuW-O7-LM1" appends="YES" id="ONd-2c-Spq"/>
+                                                    </connections>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Big Thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="DFk-GU-hub">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Big Thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="DFk-GU-hub">
                                                     <rect key="frame" x="284" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Jep-M1-bW1" appends="YES" id="E5l-px-MWh"/>
+                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -436,11 +452,19 @@
                                                         <outletCollection property="gestureRecognizers" destination="I1m-qq-NdZ" appends="YES" id="5D2-e2-8Iw"/>
                                                     </connections>
                                                 </slider>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Droplet" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-hl-XV2">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Droplet" translatesAutoresizingMaskIntoConstraints="NO" id="OA8-hl-XV2">
                                                     <rect key="frame" x="2" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="BpY-QY-R1D" appends="YES" id="aCL-VI-0Vq"/>
+                                                    </connections>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Few Droplets" translatesAutoresizingMaskIntoConstraints="NO" id="22c-Cu-6i2">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Few Droplets" translatesAutoresizingMaskIntoConstraints="NO" id="22c-Cu-6i2">
                                                     <rect key="frame" x="284" y="4" width="35" height="35"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="lee-Pp-vdF" appends="YES" id="peP-Fz-Edn"/>
+                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -454,20 +478,28 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2DI-Xl-ZJb" id="Zfh-Ji-myM">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="3tw-GI-Yfz" customClass="SmartSlider">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="atV-0A-HRS">
+                                                    <rect key="frame" x="284" y="5" width="33" height="33"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="83O-Uq-erE" appends="YES" id="Mlk-1X-aQe"/>
+                                                    </connections>
+                                                </imageView>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Time" translatesAutoresizingMaskIntoConstraints="NO" id="Q0l-jB-7CZ">
+                                                    <rect key="frame" x="4" y="5" width="33" height="33"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="3Rm-Ep-79H" appends="YES" id="Qwf-PQ-UiB"/>
+                                                    </connections>
+                                                </imageView>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="6hr-HL-r5I" customClass="SmartSlider">
                                                     <rect key="frame" x="43" y="7" width="235" height="31"/>
                                                     <gestureRecognizers/>
                                                     <connections>
-                                                        <action selector="sliderValueChanged:" destination="OKH-TR-YXk" eventType="valueChanged" id="J6e-YI-czu"/>
-                                                        <outletCollection property="gestureRecognizers" destination="E91-mW-EL7" appends="YES" id="CAm-ga-gxd"/>
+                                                        <action selector="sliderValueChanged:" destination="OKH-TR-YXk" eventType="valueChanged" id="71K-Y5-N7E"/>
+                                                        <outletCollection property="gestureRecognizers" destination="8eG-Tc-pSp" appends="YES" id="eOy-yI-V20"/>
                                                     </connections>
                                                 </slider>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="atV-0A-HRS">
-                                                    <rect key="frame" x="284" y="5" width="33" height="33"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Time" translatesAutoresizingMaskIntoConstraints="NO" id="Q0l-jB-7CZ">
-                                                    <rect key="frame" x="4" y="5" width="33" height="33"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -480,20 +512,28 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zbj-yD-5UT" id="dnA-cJ-Qvc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="6hr-HL-r5I" customClass="SmartSlider">
-                                                    <rect key="frame" x="43" y="7" width="235" height="31"/>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Time" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-AK-U9t">
+                                                    <rect key="frame" x="4" y="5" width="33" height="33"/>
                                                     <gestureRecognizers/>
                                                     <connections>
-                                                        <action selector="sliderValueChanged:" destination="OKH-TR-YXk" eventType="valueChanged" id="71K-Y5-N7E"/>
-                                                        <outletCollection property="gestureRecognizers" destination="8eG-Tc-pSp" appends="YES" id="eOy-yI-V20"/>
+                                                        <outletCollection property="gestureRecognizers" destination="tdc-KP-0X8" appends="YES" id="6Z2-Ez-6p1"/>
+                                                    </connections>
+                                                </imageView>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="RJC-m1-oBC">
+                                                    <rect key="frame" x="284" y="5" width="33" height="33"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Ld0-ue-gf6" appends="YES" id="Dyy-wV-SBQ"/>
+                                                    </connections>
+                                                </imageView>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="1" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="3tw-GI-Yfz" customClass="SmartSlider">
+                                                    <rect key="frame" x="43" y="6" width="235" height="31"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <action selector="sliderValueChanged:" destination="OKH-TR-YXk" eventType="valueChanged" id="J6e-YI-czu"/>
+                                                        <outletCollection property="gestureRecognizers" destination="E91-mW-EL7" appends="YES" id="CAm-ga-gxd"/>
                                                     </connections>
                                                 </slider>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Small Time" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-AK-U9t">
-                                                    <rect key="frame" x="4" y="5" width="33" height="33"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="RJC-m1-oBC">
-                                                    <rect key="frame" x="284" y="5" width="33" height="33"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -704,6 +744,56 @@
                 <tapGestureRecognizer cancelsTouchesInView="NO" id="HL5-LL-qbH">
                     <connections>
                         <action selector="oilButtonPressed:" destination="OKH-TR-YXk" id="Duy-Cm-mA0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="dfB-2e-qb1">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="wOt-zE-ml7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="UKd-dP-AkN">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="Yq8-WC-3h9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="cuW-O7-LM1">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="TDm-WA-IyR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="Jep-M1-bW1">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="5il-YH-EpU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="BpY-QY-R1D">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="wqg-xm-etj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="lee-Pp-vdF">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="KdQ-5W-DmS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="3Rm-Ep-79H">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="Y2Y-Yj-ILU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="83O-Uq-erE">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="YTD-OJ-fCG"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="tdc-KP-0X8">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="fKF-FW-W5Z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="Ld0-ue-gf6">
+                    <connections>
+                        <action selector="sliderIconTapped:" destination="OKH-TR-YXk" id="cBr-wL-9o8"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

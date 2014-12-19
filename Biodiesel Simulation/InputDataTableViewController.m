@@ -122,22 +122,22 @@
         {
             if(slidingLeft)
             {
-                self.litIcon = self.smallTime;
+                self.litIcon = self.smallTime2;
                 
             } else if(slidingRight)
             {
-                self.litIcon = self.bigTime;
+                self.litIcon = self.bigTime2;
             }
 
         } else if(slider == self.mixingLengthSlider)
         {
             if(slidingLeft)
             {
-                self.litIcon = self.smallTime2;
+                self.litIcon = self.smallTime;
                 
             } else if(slidingRight)
             {
-                self.litIcon = self.bigTime2;
+                self.litIcon = self.bigTime;
             }
 
         }
@@ -158,16 +158,16 @@
         header = [NSString stringWithFormat:@"INITIAL METHANOL: %i MOLES", (int)self.methanolSlider.value];
     } else if(section == 1)
     {
-        header = [NSString stringWithFormat:@"INITIAL CATALYST: %i MOLES", (int)self.catalystSlider.value];
+        header = [NSString stringWithFormat:@"INITIAL TEMPERATURE: %i ˚C", (int)self.temperatureSlider.value];
     } else if(section == 2)
     {
-        header = [NSString stringWithFormat:@"INITIAL TEMPERATURE: %i ˚C", (int)self.temperatureSlider.value];
+        header = [NSString stringWithFormat:@"INITIAL CATALYST: %i MOLES", (int)self.catalystSlider.value];
     } else if(section == 3)
     {
-        header = [NSString stringWithFormat:@"MIXING LENGTH: %i MINUTES", (int)self.settlingTimeSlider.value];
+        header = [NSString stringWithFormat:@"MIXING LENGTH: %i MINUTES", (int)self.mixingLengthSlider.value];
     } else if(section == 4)
     {
-        header = [NSString stringWithFormat:@"SETTLING TIME: %i MINUTES", (int)self.mixingLengthSlider.value];
+        header = [NSString stringWithFormat:@"SETTLING TIME: %i MINUTES", (int)self.settlingTimeSlider.value];
     } else if(section == 5 && !self.oilAmountNotChosen)
     {
         header = [NSString stringWithFormat:@"INITIAL OIL: %i MOLES", (int)self.oil];
@@ -186,16 +186,16 @@
         [self.tableView headerViewForSection:0].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:0];
     } else if(sender == self.catalystSlider)
     {
-        [self.tableView headerViewForSection:1].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:1];
+        [self.tableView headerViewForSection:2].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:2];
     } else if(sender == self.temperatureSlider)
     {
-        [self.tableView headerViewForSection:2].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:2];
+        [self.tableView headerViewForSection:1].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:1];
     } else if(sender == self.settlingTimeSlider)
     {
-        [self.tableView headerViewForSection:3].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:3];
+        [self.tableView headerViewForSection:4].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:4];
     } else if(sender == self.mixingLengthSlider)
     {
-        [self.tableView headerViewForSection:4].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:4];
+        [self.tableView headerViewForSection:3].textLabel.text = [self tableView:self.tableView titleForHeaderInSection:3];
     }
 }
 
@@ -346,6 +346,87 @@
     
     [self presentViewController:controller animated:NO completion: nil];
 }
+
+// The method called when the user hits an icon adjacent to a slider
+- (IBAction)sliderIconTapped:(UITapGestureRecognizer *)sender
+{
+    UIImageView *tappedIcon;
+    
+    if(sender.view == self.smallDroplet)
+    {
+        self.methanolSlider.value -= 1;
+        [self sliderValueChanged:self.methanolSlider];
+      
+        tappedIcon = self.smallDroplet;
+    } else if(sender.view == self.bigDroplet)
+    {
+        self.methanolSlider.value += 1;
+        [self sliderValueChanged:self.methanolSlider];
+        
+        tappedIcon = self.bigDroplet;
+    } else if(sender.view == self.smallThermometer)
+    {
+        self.temperatureSlider.value -= 1;
+        [self sliderValueChanged:self.temperatureSlider];
+        
+        tappedIcon = self.smallThermometer;
+    } else if(sender.view == self.bigThermometer)
+    {
+        self.temperatureSlider.value += 1;
+        [self sliderValueChanged:self.temperatureSlider];
+        
+        tappedIcon = self.bigThermometer;
+    } else if(sender.view == self.smallDroplet2)
+    {
+        self.catalystSlider.value -= 1;
+        [self sliderValueChanged:self.catalystSlider];
+        
+        tappedIcon = self.smallDroplet2;
+    } else if(sender.view == self.bigDroplet2)
+    {
+        self.catalystSlider.value += 1;
+        [self sliderValueChanged:self.catalystSlider];
+        
+        tappedIcon = self.bigDroplet2;
+    } else if(sender.view == self.smallTime)
+    {
+        self.mixingLengthSlider.value -= 1;
+        [self sliderValueChanged:self.mixingLengthSlider];
+        
+        tappedIcon = self.smallTime;
+    } else if(sender.view == self.bigTime)
+    {
+        self.mixingLengthSlider.value += 1;
+        [self sliderValueChanged:self.mixingLengthSlider];
+        
+        tappedIcon = self.bigTime;
+    } else if(sender.view == self.smallTime2)
+    {
+        self.settlingTimeSlider.value -= 1;
+        [self sliderValueChanged:self.settlingTimeSlider];
+        
+        tappedIcon = self.smallTime2;
+    } else if(sender.view == self.bigTime2)
+    {
+        self.settlingTimeSlider.value += 1;
+        [self sliderValueChanged:self.settlingTimeSlider];
+        
+        tappedIcon = self.bigTime2;
+    }
+    
+    [UIView animateWithDuration:0.1 animations:^{
+        tappedIcon.image = [tappedIcon.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [tappedIcon setTintColor:[UIColor greenColor]];
+        
+        [self makeViewGlow:tappedIcon color:self.view.tintColor];
+    } completion:^(BOOL finished) {
+        tappedIcon.image = [tappedIcon.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [tappedIcon setTintColor:[UIColor blackColor]];
+        [self makeViewNotGlow:tappedIcon];
+    }];
+
+}
+
 
 # pragma mark - MVC Lifecycle
 
