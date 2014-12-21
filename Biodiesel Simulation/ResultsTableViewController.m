@@ -52,15 +52,15 @@
     self.costLabel.text = price;
     self.gallonsLabel.text = [NSString stringWithFormat:@"%i gallons", [self.gameResults[@"Gallons"] intValue]];
     
-    self.ethanolLabel.text = [NSString stringWithFormat:@"%i moles", [self.simulationResults[@"Eout"] integerValue]];
+    self.ethanolLabel.text = [NSString stringWithFormat:@"%i moles", (int)[self.simulationResults[@"Eout"] integerValue]];
     self.conversionLabel.text = [NSString stringWithFormat:@"%i%%", [self.simulationResults[@"Convout"] intValue]];
     
-    self.methanolLabel.text = [NSString stringWithFormat:@"%i moles", [self.simulationData[@"Initial Methanol"] integerValue]];
-    self.catalystLabel.text = [NSString stringWithFormat:@"%i moles", [self.simulationData[@"Initial Catalyst"] integerValue]];
-    self.temperatureLabel.text = [NSString stringWithFormat:@"%i ˚C", [self.simulationData[@"Temperature"] integerValue]];
-    self.mixingLengthLabel.text = [NSString stringWithFormat:@"%i minutes", [self.simulationData[@"Mixing Length"] integerValue]];
-    self.settlingTimeLabel.text = [NSString stringWithFormat:@"%i minutes", [self.simulationData[@"Settling Time"] integerValue]];
-    self.oilLabel.text = [NSString stringWithFormat:@"%i moles", [self.simulationData[@"Initial Oil"] integerValue]];
+    self.methanolLabel.text = [NSString stringWithFormat:@"%i moles", (int)[self.simulationData[@"Initial Methanol"] integerValue]];
+    self.catalystLabel.text = [NSString stringWithFormat:@"%i moles", (int)[self.simulationData[@"Initial Catalyst"] integerValue]];
+    self.temperatureLabel.text = [NSString stringWithFormat:@"%i ˚C", (int)[self.simulationData[@"Temperature"] integerValue]];
+    self.mixingLengthLabel.text = [NSString stringWithFormat:@"%i minutes", (int)[self.simulationData[@"Mixing Length"] integerValue]];
+    self.settlingTimeLabel.text = [NSString stringWithFormat:@"%i minutes", (int)[self.simulationData[@"Settling Time"] integerValue]];
+    self.oilLabel.text = [NSString stringWithFormat:@"%i moles", (int)[self.simulationData[@"Initial Oil"] integerValue]];
 }
 
 @end

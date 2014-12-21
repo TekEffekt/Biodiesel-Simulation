@@ -38,7 +38,29 @@
 
 - (void)animationFinished:(CarAnimationScene*)scene
 {
-    if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue] andStoreLevelUpInfo:YES])
+    if(scene.simulationFailed)
+    {
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"The converion ratio a.k.a the quality of your fuel was too low! Aim for at least a 95% coversion ratio." preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertController *controller2 = [UIAlertController alertControllerWithTitle:@"Your Fuel's Ratio"
+                                                                             message:[NSString stringWithFormat:@"Your fuel's conversion ratio was %i%%. %i%% away from the ideal 95%%", [self.simulationResults[@"Convout"] integerValue], (int)(95 - [self.simulationResults[@"Convout"] integerValue])]
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self presentViewController:controller2 animated:YES completion:nil];
+        }];
+        
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"To Results Screen" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self performSegueWithIdentifier:@"To Results" sender:self];
+        }];
+        
+        [controller addAction:action];
+        [controller2 addAction:action2];
+        
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+    else if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue] andStoreLevelUpInfo:YES] && !scene.simulationFailed)
     {
         [[NSUserDefaults standardUserDefaults] setValue:@"Unlocked" forKey:@"Just Unlocked Level"];
         
@@ -88,7 +110,7 @@
     UIAlertController *resultAlert =
     [UIAlertController alertControllerWithTitle:@"Results"
                                         message: [NSString stringWithFormat:@"You travelled %i miles for %@ a gallon!",
-                                                  [self.gameResults[@"Distance"] integerValue], price]
+                                                  (int)[self.gameResults[@"Distance"] integerValue], price]
                                  preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){ [self performSegueWithIdentifier:@"To Results" sender:self]; }];
     

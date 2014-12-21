@@ -21,19 +21,26 @@
     double pricePerGallon = [(NSNumber*)fuel[@"Cost"] doubleValue];
     double effeciency = [(NSNumber*)fuel[@"Eout"] doubleValue] / 10;
     
+    NSString *fuelQualityTooLow = @"No";
+    
+    if([fuel[@"Convout"] floatValue] < 95)
+    {
+        fuelQualityTooLow = @"Yes";
+    }
+    
     double gallons = wallet / pricePerGallon;
     
     double distanceTravelled = gallons * effeciency;
     
     NSDictionary *gameResults = @{@"Price": [NSNumber numberWithDouble:pricePerGallon], @"Gallons": [NSNumber numberWithDouble:gallons],
-                                  @"Distance": [NSNumber numberWithDouble:distanceTravelled]};
+                                  @"Distance": [NSNumber numberWithDouble:distanceTravelled], @"Fuel Quality": fuelQualityTooLow};
     
     return gameResults;
 }
 
 + (int)getHighestUnlockedLevel
 {
-    int highestUnlockedLevel = [[NSUserDefaults standardUserDefaults] integerForKey:@"Highest Unlocked Level"];
+    int highestUnlockedLevel = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"Highest Unlocked Level"];
     
     if(!highestUnlockedLevel)
     {

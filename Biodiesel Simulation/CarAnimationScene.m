@@ -23,6 +23,7 @@
 @property(strong, nonatomic) AVAudioPlayer *highScoreSound;
 @property(strong, nonatomic) AVAudioPlayer *carStartSound;
 @property(strong, nonatomic) AVAudioPlayer *driveAwaySound;
+@property(strong, nonatomic) AVAudioPlayer *carWontStartSound;
 
 @end
 
@@ -67,6 +68,19 @@
     return _driveAwaySound;
 }
 
+- (AVAudioPlayer*)carWontStartSound
+{
+    if(!_carWontStartSound)
+    {
+        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CarWontStart" ofType:@"mp3"]];
+        _carWontStartSound = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        _carWontStartSound.delegate = self;
+        [_carWontStartSound prepareToPlay];
+    }
+    
+    return _carWontStartSound;
+}
+
 #pragma mark - Scene Life Cycle
 - (void)didMoveToView:(SKView *)view
 {
@@ -83,9 +97,18 @@
 {
     if(self.gasGauge.needleDoneMoving && !self.carAnimationStarted && !self.timerStarted)
     {
-        self.gasGauge.needleDoneMoving = NO;
-        [self.carStartSound play];
-        NSLog(@"starting");
+        
+        NSString *fuelQuality = (NSString*)self.gameResults[@"Fuel Quality"];
+        
+        if([fuelQuality isEqualToString:@"Yes"])
+        {
+            [self playCarStartFailedAnimation];
+        } else
+        {
+            self.gasGauge.needleDoneMoving = NO;
+            [self.carStartSound play];
+            NSLog(@"starting");
+        }
     } else if(self.carAnimationStarted && self.background.scrollingSpeed < 60)
     {
         NSLog(@"Speeding up");
@@ -225,6 +248,13 @@
     [self addChild:self.gasGauge];
 }
 
+// The effect that plays when the fuel's conversion ration is below 50%
+- (void)playCarStartFailedAnimation
+{
+    [self.carWontStartSound play];
+    self.gasGauge.needleDoneMoving = NO;
+}
+
 #pragma mark - Audio Methods
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
@@ -232,6 +262,14 @@
     {
         [self startCarAnimation];
         [self.driveAwaySound play];
+    } else if(player == self.carWontStartSound)
+    {
+        self.simulationFailed = YES;
+        
+        if([self.delegate respondsToSelector:@selector(animationFinished:)])
+        {
+            [(NSObject*)self.delegate performSelectorOnMainThread:@selector(animationFinished:) withObject:self waitUntilDone:NO];
+        }
     }
 }
 

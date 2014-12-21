@@ -15,6 +15,7 @@
 
 @property(strong, nonatomic) NSDictionary *gameResults;
 @property(assign, nonatomic) id<CarAnimationController> delegate;
+@property(nonatomic) BOOL simulationFailed;
 
 @end
 

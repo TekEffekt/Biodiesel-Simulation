@@ -231,6 +231,7 @@ int simInitSettleLength=5;
 
 - (NSDictionary*)getTheResult
 {
+    // The convout is converted here to a full decimal number
       return @{@"TGout": [NSNumber numberWithFloat:TGout], @"DGout": [NSNumber numberWithFloat:DGout],
                         @"MGout": [NSNumber numberWithFloat:MGout], @"Eout": [NSNumber numberWithFloat:Eout],
                         @"Convout": [NSNumber numberWithFloat:Convout * 100], @"Cost":
