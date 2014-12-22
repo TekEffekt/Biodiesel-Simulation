@@ -11,12 +11,12 @@
 #import "SimulationOperation.h"
 #import "CarDistanceGame.h"
 #import "CarAnimationViewController.h"
+#import "UIView+Glow.h"
 
 @interface SimulationViewController () <SimulationController>
 
 @property(nonatomic, strong) NSOperationQueue *simulationQueue;
 @property(nonatomic, strong) SimulationOperation *simulationOperation;
-
 
 @property(nonatomic) float initialOil;
 @property(nonatomic) float initialMethanol;
@@ -28,7 +28,9 @@
 @property(strong, nonatomic) NSDictionary *simulationResults;
 @property(strong, nonatomic) NSDictionary *gameResults;
 
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIImageView *vialImage;
+@property (weak, nonatomic) IBOutlet UILabel *simulationLabel;
+
 @end
 
 @implementation SimulationViewController
@@ -52,14 +54,19 @@
     self.temperature = [[self.simulationData objectForKey:@"Temperature"] floatValue];
     self.settlingTime = [[self.simulationData objectForKey:@"Settling Time"] floatValue];
     self.mixingLength = [[self.simulationData objectForKey:@"Mixing Length"] floatValue];
+    
     [self startSimulation];
-    [self.activityIndicator startAnimating];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [self.simulationOperation cancel];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self addActivityHUD];
 }
 
 #pragma mark - Simulation Code
@@ -78,7 +85,6 @@
 {
     self.simulationResults = operation.results;
     NSLog(@"The Results: %@", self.simulationResults);
-    [self.activityIndicator stopAnimating];
     self.gameResults = [CarDistanceGame computeTheDistanceWithFuel:self.simulationResults];
     
     [self uploadResults];
@@ -111,6 +117,29 @@
     NSURLSessionTask *task = [session downloadTaskWithRequest:request];
     
     [task resume];
+}
+
+#pragma mark - UI Code
+
+- (void)addActivityHUD
+{
+    self.vialImage.image = [self.vialImage.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    [self.vialImage setTintColor:self.view.tintColor];
+
+    [self makeViewGlow:self.vialImage color:self.view.tintColor];
+    [self makeViewGlow:self.simulationLabel color:self.view.tintColor];
+    
+    [self.vialImage startGlowingWithColor:self.view.tintColor intensity:1.0];
+    [self.simulationLabel startGlowingWithColor:self.view.tintColor intensity:1.0];
+}
+
+- (void)makeViewGlow:(UIView*)view color:(UIColor*)color
+{
+    view.layer.shadowColor = [color CGColor];
+    view.layer.shadowRadius = 5.0f;
+    view.layer.shadowOpacity = 0.9;
+    view.layer.shadowOffset = CGSizeZero;
+    view.layer.masksToBounds = NO;
 }
 
 #pragma mark - Navigation
