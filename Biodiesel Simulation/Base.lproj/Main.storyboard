@@ -692,6 +692,11 @@
                         <outlet property="smallTime2" destination="0NB-AK-U9t" id="VxY-nG-hfO"/>
                         <outlet property="startSimulationButton" destination="aYy-S7-XsB" id="CLD-Dd-dwg"/>
                         <outlet property="temperatureSlider" destination="duK-pg-fdL" id="nGc-Ju-gOp"/>
+                        <outletCollection property="sliders" destination="Xix-Wx-BUk" id="ybf-Hd-Lyl"/>
+                        <outletCollection property="sliders" destination="duK-pg-fdL" id="atY-8Y-nTo"/>
+                        <outletCollection property="sliders" destination="awn-hM-mMj" id="znP-IR-SyT"/>
+                        <outletCollection property="sliders" destination="6hr-HL-r5I" id="cQj-4h-dsr"/>
+                        <outletCollection property="sliders" destination="3tw-GI-Yfz" id="f7A-qi-KE3"/>
                         <segue destination="j4g-X8-YOn" kind="show" id="mGp-d4-aEp"/>
                     </connections>
                 </tableViewController>

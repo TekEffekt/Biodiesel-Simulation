@@ -107,18 +107,15 @@
         {
             self.gasGauge.needleDoneMoving = NO;
             [self.carStartSound play];
-            NSLog(@"starting");
         }
     } else if(self.carAnimationStarted && self.background.scrollingSpeed < 60)
     {
-        NSLog(@"Speeding up");
         self.background.scrollingSpeed *= 1.05; // gradually speed up the car
         [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(stopCarAnimation:) userInfo:nil repeats:NO];
         [self.gasGauge moveGaugeToAngle:M_PI/2 withDuration:6.0];
         self.timerStarted = YES;
     } else if(self.carAnimationStopped && self.background.scrollingSpeed > 0)
     {
-        NSLog(@"Slowing");
         self.background.scrollingSpeed -= 0.35; // gradually slow down the car
 
     } else if(self.background.scrollingSpeed < 0)
@@ -230,14 +227,13 @@
     CGFloat gas = [self.gameResults[@"Gallons"] floatValue];
     CGFloat angle = [self getAngleForGas:gas];
     
-    NSLog(@"%f", [self.gameResults[@"Gallons"] floatValue]/80.0);
+    NSLog(@"Angle: %f", [self.gameResults[@"Gallons"] floatValue]/80.0);
                      
     [self.gasGauge moveGaugeToAngle:angle withDuration:[self.gameResults[@"Gallons"] floatValue]/80.0];
 }
 
 - (void)stopCarAnimation:(NSTimer *)timer
 {
-    NSLog(@"Stopped");
     self.carAnimationStopped = YES;
     self.carAnimationStarted = NO;
     self.gasGauge.needleDoneMoving = NO;

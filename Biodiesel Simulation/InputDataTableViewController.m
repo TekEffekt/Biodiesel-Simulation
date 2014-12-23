@@ -39,6 +39,8 @@
 @property (weak, nonatomic) IBOutlet SmartSlider *temperatureSlider;
 @property (weak, nonatomic) IBOutlet SmartSlider *settlingTimeSlider;
 @property (weak, nonatomic) IBOutlet SmartSlider *mixingLengthSlider;
+@property (strong, nonatomic) IBOutletCollection(SmartSlider) NSArray *sliders;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *startSimulationButton;
 
@@ -528,7 +530,11 @@
     {
         [self playUnlockEffect:[CarDistanceGame getHighestUnlockedLevel]];
     }
-
+    
+    if(self.previousSimulationInputs)
+    {
+        [self loadPreviousInputs];
+    }
 }
 
 - (void)viewDidLoad
@@ -536,11 +542,6 @@
     [super viewDidLoad];
     self.oil = 5;
     self.oilAmountNotChosen = YES;
-    
-    if(self.previousSimulationInputs)
-    {
-        [self loadPreviousInputs];
-    }
 }
 
 #pragma mark - Tutorial
@@ -668,11 +669,34 @@
 
 - (void)loadPreviousInputs
 {
-    self.methanolSlider.value = [self.previousSimulationInputs[@"Initial Methanol"] integerValue];
-    self.catalystSlider.value = [self.previousSimulationInputs[@"Initial Catalyst"] integerValue];
-    self.temperatureSlider.value = [self.previousSimulationInputs[@"Temperature"] integerValue];
-    self.settlingTimeSlider.value = [self.previousSimulationInputs[@"Settling Time"] integerValue];
-    self.mixingLengthSlider.value = [self.previousSimulationInputs[@"Mixing Length"] integerValue];
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.methanolSlider setValue:[self.previousSimulationInputs[@"Initial Methanol"] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.methanolSlider];
+    
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.temperatureSlider setValue:[self.previousSimulationInputs[@"Temperature"] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.temperatureSlider];
+    
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.catalystSlider setValue:[self.previousSimulationInputs[@"Initial Catalyst"] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.catalystSlider];
+    
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.mixingLengthSlider setValue:[self.previousSimulationInputs[@"Mixing Length"] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.mixingLengthSlider];
+    
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.settlingTimeSlider setValue:[self.previousSimulationInputs[@"Settling Time"] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.settlingTimeSlider];
 }
 
 #pragma mark - Navigation
