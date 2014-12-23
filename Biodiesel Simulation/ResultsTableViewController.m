@@ -8,6 +8,7 @@
 
 #import "ResultsTableViewController.h"
 #import "CarDistanceGame.h"
+#import "InputDataTableViewController.h"
 
 @interface ResultsTableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
@@ -61,6 +62,16 @@
     self.mixingLengthLabel.text = [NSString stringWithFormat:@"%i minutes", (int)[self.simulationData[@"Mixing Length"] integerValue]];
     self.settlingTimeLabel.text = [NSString stringWithFormat:@"%i minutes", (int)[self.simulationData[@"Settling Time"] integerValue]];
     self.oilLabel.text = [NSString stringWithFormat:@"%i moles", (int)[self.simulationData[@"Initial Oil"] integerValue]];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"Back To Input"])
+    {
+        InputDataTableViewController *controller = (InputDataTableViewController*)segue.destinationViewController;
+        
+        controller.previousSimulationInputs = self.simulationData;
+    }
 }
 
 @end

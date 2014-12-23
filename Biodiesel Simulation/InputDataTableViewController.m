@@ -431,22 +431,37 @@
 // Moves sliders to suggested value
 - (IBAction)autoButtonHit:(UIBarButtonItem *)sender
 {
-    NSURL *url = [NSURL URLWithString:@"http://cinnamon.cs.uwp.edu/biodiesel/suggestions/suggestionRequestor.php"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-    NSURLSessionTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
-        if(!error)
-        {
-            NSString *strResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
-            NSArray *suggestions = [strResult componentsSeparatedByString:@","];
-            self.suggestedValues = suggestions;
-            
-            [self performSelectorOnMainThread:@selector(moveSlidersToSuggestedValues) withObject:self waitUntilDone:NO];
-        }
-    }];
-    
-    [task resume];
+    if(self.tutorialOn)
+    {
+        [self.blurView removeFromSuperview];
+        [self.pageViewController.view removeFromSuperview];
+        self.tableView.scrollEnabled = YES;
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Faded In"];
+        
+        self.tutorialOn = NO;
+        self.navigationItem.rightBarButtonItem.title = @"Auto";
+        self.navigationItem.hidesBackButton = NO;
+        
+    } else
+    {
+        NSURL *url = [NSURL URLWithString:@"http://cinnamon.cs.uwp.edu/biodiesel/suggestions/suggestionRequestor.php"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+        NSURLSessionTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+            if(!error)
+            {
+                NSString *strResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
+                NSArray *suggestions = [strResult componentsSeparatedByString:@","];
+                self.suggestedValues = suggestions;
+                
+                [self performSelectorOnMainThread:@selector(moveSlidersToSuggestedValues) withObject:self waitUntilDone:NO];
+            }
+        }];
+        
+        [task resume];
+    }
 }
 
 - (void)moveSlidersToSuggestedValues
@@ -521,6 +536,11 @@
     [super viewDidLoad];
     self.oil = 5;
     self.oilAmountNotChosen = YES;
+    
+    if(self.previousSimulationInputs)
+    {
+        [self loadPreviousInputs];
+    }
 }
 
 #pragma mark - Tutorial
@@ -646,6 +666,15 @@
     return sliderValues;
 }
 
+- (void)loadPreviousInputs
+{
+    self.methanolSlider.value = [self.previousSimulationInputs[@"Initial Methanol"] integerValue];
+    self.catalystSlider.value = [self.previousSimulationInputs[@"Initial Catalyst"] integerValue];
+    self.temperatureSlider.value = [self.previousSimulationInputs[@"Temperature"] integerValue];
+    self.settlingTimeSlider.value = [self.previousSimulationInputs[@"Settling Time"] integerValue];
+    self.mixingLengthSlider.value = [self.previousSimulationInputs[@"Mixing Length"] integerValue];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -674,23 +703,6 @@
     }
     
     return should;
-}
-
-- (IBAction)remove:(UIBarButtonItem *)sender
-{
-    if(self.tutorialOn)
-    {
-        [self.blurView removeFromSuperview];
-        [self.pageViewController.view removeFromSuperview];
-        self.tableView.scrollEnabled = YES;
-        
-        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"Faded In"];
-        
-        self.tutorialOn = NO;
-        self.navigationItem.rightBarButtonItem.title = @"Auto";
-        self.navigationItem.hidesBackButton = NO;
-
-    }
 }
 
 @end

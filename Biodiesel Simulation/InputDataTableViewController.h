@@ -11,4 +11,6 @@
 
 @interface InputDataTableViewController : UITableViewController
 
+@property(strong, nonatomic) NSDictionary *previousSimulationInputs;
+
 @end

@@ -664,7 +664,7 @@
                     <navigationItem key="navigationItem" title="Inputs" id="uCm-ly-lGa">
                         <barButtonItem key="rightBarButtonItem" title="Auto" id="PbK-j4-5og">
                             <connections>
-                                <action selector="autoButtonHit:" destination="OKH-TR-YXk" id="fTW-4Y-VCz"/>
+                                <action selector="autoButtonHit:" destination="OKH-TR-YXk" id="qAY-PF-Nqu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1134,7 +1134,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OKH-TR-YXk" kind="show" id="loF-3h-obG"/>
+                                            <segue destination="OKH-TR-YXk" kind="show" identifier="Back To Input" id="loF-3h-obG"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
