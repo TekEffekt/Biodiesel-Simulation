@@ -29,7 +29,6 @@
 @property(strong, nonatomic) NSDictionary *gameResults;
 
 @property (weak, nonatomic) IBOutlet UIImageView *vialImage;
-@property (weak, nonatomic) IBOutlet UILabel *simulationLabel;
 
 @end
 
@@ -127,10 +126,8 @@
     [self.vialImage setTintColor:self.view.tintColor];
 
     [self makeViewGlow:self.vialImage color:self.view.tintColor];
-    [self makeViewGlow:self.simulationLabel color:self.view.tintColor];
     
     [self.vialImage startGlowingWithColor:self.view.tintColor intensity:1.0];
-    [self.simulationLabel startGlowingWithColor:self.view.tintColor intensity:1.0];
 }
 
 - (void)makeViewGlow:(UIView*)view color:(UIColor*)color

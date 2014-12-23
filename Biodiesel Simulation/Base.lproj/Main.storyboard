@@ -664,7 +664,7 @@
                     <navigationItem key="navigationItem" title="Inputs" id="uCm-ly-lGa">
                         <barButtonItem key="rightBarButtonItem" title="Auto" id="PbK-j4-5og">
                             <connections>
-                                <action selector="remove:" destination="OKH-TR-YXk" id="vHL-iT-tRP"/>
+                                <action selector="autoButtonHit:" destination="OKH-TR-YXk" id="fTW-4Y-VCz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

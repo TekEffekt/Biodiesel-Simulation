@@ -44,6 +44,8 @@
 
 @property(nonatomic) BOOL oilAmountNotChosen;
 
+@property(strong, nonatomic) NSArray *suggestedValues;
+
 // oil value stored in a property due to not being stored in a slider
 @property(nonatomic) CGFloat oil;
 
@@ -424,9 +426,62 @@
         [tappedIcon setTintColor:[UIColor blackColor]];
         [self makeViewNotGlow:tappedIcon];
     }];
-
 }
 
+// Moves sliders to suggested value
+- (IBAction)autoButtonHit:(UIBarButtonItem *)sender
+{
+    NSURL *url = [NSURL URLWithString:@"http://cinnamon.cs.uwp.edu/biodiesel/suggestions/suggestionRequestor.php"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    NSURLSessionTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        if(!error)
+        {
+            NSString *strResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
+            NSArray *suggestions = [strResult componentsSeparatedByString:@","];
+            self.suggestedValues = suggestions;
+            
+            [self performSelectorOnMainThread:@selector(moveSlidersToSuggestedValues) withObject:self waitUntilDone:NO];
+        }
+    }];
+    
+    [task resume];
+}
+
+- (void)moveSlidersToSuggestedValues
+{
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.methanolSlider setValue:[self.suggestedValues[1] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.methanolSlider];
+
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.temperatureSlider setValue:[self.suggestedValues[2] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.temperatureSlider];
+
+    
+    int catalystValue = arc4random_uniform(10) + 1;
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.catalystSlider setValue:catalystValue animated:YES];
+    }];
+    [self sliderValueChanged:self.catalystSlider];
+
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.mixingLengthSlider setValue:[self.suggestedValues[3] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.mixingLengthSlider];
+
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        [self.settlingTimeSlider setValue:[self.suggestedValues[4] integerValue] animated:YES];
+    }];
+    [self sliderValueChanged:self.settlingTimeSlider];
+}
 
 # pragma mark - MVC Lifecycle
 

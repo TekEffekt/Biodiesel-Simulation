@@ -17,23 +17,28 @@
 
 + (NSDictionary*)computeTheDistanceWithFuel:(NSDictionary *)fuel
 {
+    NSDictionary *gameResults;
+    
     double wallet = 50; // the amount of money available to buy fuel
     double pricePerGallon = [(NSNumber*)fuel[@"Cost"] doubleValue];
     double effeciency = [(NSNumber*)fuel[@"Eout"] doubleValue] / 10;
+    
+    double gallons = wallet / pricePerGallon;
+    
+    double distanceTravelled = gallons * effeciency;
     
     NSString *fuelQualityTooLow = @"No";
     
     if([fuel[@"Convout"] floatValue] < 95)
     {
         fuelQualityTooLow = @"Yes";
+        
+        gameResults = @{@"Price": [NSNumber numberWithDouble:pricePerGallon], @"Gallons":[NSNumber numberWithDouble:gallons] , @"Distance": @0, @"Fuel Quality": fuelQualityTooLow};
+    } else
+    {
+        gameResults = @{@"Price": [NSNumber numberWithDouble:pricePerGallon], @"Gallons": [NSNumber numberWithDouble:gallons],
+                                      @"Distance": [NSNumber numberWithDouble:distanceTravelled], @"Fuel Quality": fuelQualityTooLow};
     }
-    
-    double gallons = wallet / pricePerGallon;
-    
-    double distanceTravelled = gallons * effeciency;
-    
-    NSDictionary *gameResults = @{@"Price": [NSNumber numberWithDouble:pricePerGallon], @"Gallons": [NSNumber numberWithDouble:gallons],
-                                  @"Distance": [NSNumber numberWithDouble:distanceTravelled], @"Fuel Quality": fuelQualityTooLow};
     
     return gameResults;
 }
