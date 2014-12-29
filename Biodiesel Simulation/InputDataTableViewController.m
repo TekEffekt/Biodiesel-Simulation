@@ -675,7 +675,6 @@
                                          @"Temperature":[NSNumber numberWithFloat:self.temperatureSlider.value],
                                          @"Settling Time":[NSNumber numberWithFloat:self.settlingTimeSlider.value],
                                          @"Mixing Length":[NSNumber numberWithFloat:self.mixingLengthSlider.value]};
-    NSLog(@"%@", sliderValues);
     return sliderValues;
 }
 

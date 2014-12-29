@@ -15,6 +15,7 @@
 
 @property(strong, nonatomic) ScrollingNode *background;
 @property(strong, nonatomic) GasGaugeNode *gasGauge;
+@property(strong, nonatomic) SKLabelNode *gasFillingLabel;
 @property(strong, nonatomic) SKSpriteNode *car;
 @property(nonatomic) BOOL carAnimationStarted; 
 @property(nonatomic) BOOL timerStarted;
@@ -97,6 +98,7 @@
 {
     if(self.gasGauge.needleDoneMoving && !self.carAnimationStarted && !self.timerStarted)
     {
+        [self makeGasFillingLabelFadeOut];
         
         NSString *fuelQuality = (NSString*)self.gameResults[@"Fuel Quality"];
         
@@ -187,6 +189,21 @@
     return spark;
 }
 
+- (SKLabelNode*)getGasFillingLabel
+{
+    SKLabelNode *label = [SKLabelNode labelNodeWithText:@"Filling the car with your gas!"];
+    label.fontSize = 23;
+    label.fontName = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline].fontName;
+    SKAction *fadeOutAction = [SKAction fadeOutWithDuration:0.7];
+    SKAction *fadeInAction = [SKAction fadeInWithDuration:0.7];
+    
+    SKAction *blinkingAction = [SKAction sequence:@[fadeOutAction, fadeInAction]];
+    
+    [label runAction:[SKAction repeatActionForever:blinkingAction]];
+    
+    return label;
+}
+
 #pragma mark - Animation
 - (void)startCarAnimation
 {
@@ -227,9 +244,12 @@
     CGFloat gas = [self.gameResults[@"Gallons"] floatValue];
     CGFloat angle = [self getAngleForGas:gas];
     
-    NSLog(@"Angle: %f", [self.gameResults[@"Gallons"] floatValue]/80.0);
-                     
-    [self.gasGauge moveGaugeToAngle:angle withDuration:[self.gameResults[@"Gallons"] floatValue]/80.0];
+    [self.gasGauge moveGaugeToAngle:angle withDuration:[self.gameResults[@"Gallons"] floatValue]/50.0];
+    
+    self.gasFillingLabel = [self getGasFillingLabel];
+    self.gasFillingLabel.position = CGPointMake(CGRectGetMidX(self.gasGauge.frame), self.gasGauge.position.y + self.gasGauge.size.height);
+    
+    [self addChild:self.gasFillingLabel];
 }
 
 - (void)stopCarAnimation:(NSTimer *)timer
@@ -249,6 +269,14 @@
 {
     [self.carWontStartSound play];
     self.gasGauge.needleDoneMoving = NO;
+}
+
+- (void)makeGasFillingLabelFadeOut
+{
+    SKAction *fadeOut = [SKAction fadeOutWithDuration:1.0];
+    
+    [self.gasFillingLabel runAction:fadeOut];
+    [self.gasFillingLabel removeFromParent];
 }
 
 #pragma mark - Audio Methods
