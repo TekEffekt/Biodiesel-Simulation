@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
     self.tutorialText.text = self.titleText;
     self.tutorialText.textAlignment = NSTextAlignmentCenter;

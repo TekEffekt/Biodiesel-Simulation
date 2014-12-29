@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60E1F451A50A10A00E40869 /* page4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F441A50A10A00E40869 /* page4.jpg */; };
+		B60E1F471A50A45A00E40869 /* page3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F461A50A45A00E40869 /* page3.jpg */; };
+		B60E1F491A50A55700E40869 /* page5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F481A50A55700E40869 /* page5.jpg */; };
+		B60E1F511A510EB500E40869 /* page7.png in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F4F1A510EB500E40869 /* page7.png */; };
+		B60E1F531A5115C500E40869 /* page6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F521A5115C500E40869 /* page6.jpg */; };
+		B60E1F591A5133BD00E40869 /* page8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F581A5133BD00E40869 /* page8.jpg */; };
+		B60E1F5B1A51383500E40869 /* page9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F5A1A51383500E40869 /* page9.jpg */; };
+		B60E1F5D1A513DEA00E40869 /* page10.png in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F5C1A513DEA00E40869 /* page10.png */; };
+		B60E1F5F1A513F5500E40869 /* page11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B60E1F5E1A513F5500E40869 /* page11.jpg */; };
 		B62086CE1A3C2824003691D1 /* Biodiesel_SimulationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086CD1A3C2824003691D1 /* Biodiesel_SimulationTests.m */; };
 		B62087111A3C2BE6003691D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086E21A3C2BE5003691D1 /* AppDelegate.m */; };
 		B62087121A3C2BE6003691D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B62086E41A3C2BE5003691D1 /* LaunchScreen.xib */; };
@@ -25,8 +34,6 @@
 		B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = B62086F91A3C2BE5003691D1 /* MyParticle.sks */; };
 		B62087201A3C2BE6003691D1 /* page1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B62086FA1A3C2BE5003691D1 /* page1.jpg */; };
 		B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B62086FB1A3C2BE5003691D1 /* page2.jpeg */; };
-		B62087221A3C2BE6003691D1 /* page3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B62086FC1A3C2BE5003691D1 /* page3.jpg */; };
-		B62087231A3C2BE6003691D1 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = B62086FD1A3C2BE5003691D1 /* page4.png */; };
 		B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62086FF1A3C2BE5003691D1 /* PageContentViewController.m */; };
 		B62087251A3C2BE6003691D1 /* RegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */; };
 		B62087261A3C2BE6003691D1 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */; };
@@ -41,6 +48,8 @@
 		B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA541A3F6F21008E2756 /* carStart.mp3 */; };
 		B6BFAA571A3F7608008E2756 /* carDriveOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */; };
 		B6D0BF171A47C6D700A87B1D /* CarWontStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6D0BF161A47C6D700A87B1D /* CarWontStart.mp3 */; };
+		B6D48E0A1A51F40F008DAB59 /* page12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E091A51F40F008DAB59 /* page12.jpg */; };
+		B6D48E0C1A51FAC5008DAB59 /* page13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E0B1A51FAC5008DAB59 /* page13.jpg */; };
 		B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60E1F441A50A10A00E40869 /* page4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page4.jpg; sourceTree = "<group>"; };
+		B60E1F461A50A45A00E40869 /* page3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page3.jpg; sourceTree = "<group>"; };
+		B60E1F481A50A55700E40869 /* page5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page5.jpg; sourceTree = "<group>"; };
+		B60E1F4F1A510EB500E40869 /* page7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page7.png; sourceTree = "<group>"; };
+		B60E1F521A5115C500E40869 /* page6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page6.jpg; sourceTree = "<group>"; };
+		B60E1F581A5133BD00E40869 /* page8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page8.jpg; sourceTree = "<group>"; };
+		B60E1F5A1A51383500E40869 /* page9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page9.jpg; sourceTree = "<group>"; };
+		B60E1F5C1A513DEA00E40869 /* page10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page10.png; sourceTree = "<group>"; };
+		B60E1F5E1A513F5500E40869 /* page11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page11.jpg; sourceTree = "<group>"; };
 		B62086AE1A3C2824003691D1 /* Biodiesel Simulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Biodiesel Simulation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62086C71A3C2824003691D1 /* Biodiesel SimulationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Biodiesel SimulationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62086CC1A3C2824003691D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,8 +101,6 @@
 		B62086F91A3C2BE5003691D1 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
 		B62086FA1A3C2BE5003691D1 /* page1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page1.jpg; sourceTree = "<group>"; };
 		B62086FB1A3C2BE5003691D1 /* page2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page2.jpeg; sourceTree = "<group>"; };
-		B62086FC1A3C2BE5003691D1 /* page3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page3.jpg; sourceTree = "<group>"; };
-		B62086FD1A3C2BE5003691D1 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		B62086FE1A3C2BE5003691D1 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		B62086FF1A3C2BE5003691D1 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		B62087001A3C2BE5003691D1 /* RegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterTableViewController.h; sourceTree = "<group>"; };
@@ -109,6 +125,8 @@
 		B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carDriveOff.mp3; sourceTree = "<group>"; };
 		B6D0BF0F1A478A7800A87B1D /* Biodiesel Simulation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Biodiesel Simulation-Bridging-Header.h"; sourceTree = "<group>"; };
 		B6D0BF161A47C6D700A87B1D /* CarWontStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CarWontStart.mp3; sourceTree = "<group>"; };
+		B6D48E091A51F40F008DAB59 /* page12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page12.jpg; sourceTree = "<group>"; };
+		B6D48E0B1A51FAC5008DAB59 /* page13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page13.jpg; sourceTree = "<group>"; };
 		B6F71D491A4140C400162FD0 /* UIView+Glow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glow.h"; sourceTree = "<group>"; };
 		B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,8 +285,17 @@
 			children = (
 				B62086FA1A3C2BE5003691D1 /* page1.jpg */,
 				B62086FB1A3C2BE5003691D1 /* page2.jpeg */,
-				B62086FC1A3C2BE5003691D1 /* page3.jpg */,
-				B62086FD1A3C2BE5003691D1 /* page4.png */,
+				B60E1F461A50A45A00E40869 /* page3.jpg */,
+				B60E1F441A50A10A00E40869 /* page4.jpg */,
+				B60E1F481A50A55700E40869 /* page5.jpg */,
+				B60E1F521A5115C500E40869 /* page6.jpg */,
+				B60E1F4F1A510EB500E40869 /* page7.png */,
+				B60E1F581A5133BD00E40869 /* page8.jpg */,
+				B60E1F5A1A51383500E40869 /* page9.jpg */,
+				B60E1F5C1A513DEA00E40869 /* page10.png */,
+				B60E1F5E1A513F5500E40869 /* page11.jpg */,
+				B6D48E091A51F40F008DAB59 /* page12.jpg */,
+				B6D48E0B1A51FAC5008DAB59 /* page13.jpg */,
 			);
 			name = "Tutorial Images";
 			sourceTree = "<group>";
@@ -353,20 +380,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62087231A3C2BE6003691D1 /* page4.png in Resources */,
 				B620872C1A3C2BE6003691D1 /* spark.png in Resources */,
 				B620871C1A3C2BE6003691D1 /* Level Up Sound.mp3 in Resources */,
+				B60E1F5B1A51383500E40869 /* page9.jpg in Resources */,
 				B62087121A3C2BE6003691D1 /* LaunchScreen.xib in Resources */,
-				B62087221A3C2BE6003691D1 /* page3.jpg in Resources */,
 				B62087191A3C2BE6003691D1 /* Images.xcassets in Resources */,
 				B62087141A3C2BE6003691D1 /* car.atlas in Resources */,
 				B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */,
 				B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */,
+				B60E1F491A50A55700E40869 /* page5.jpg in Resources */,
+				B6D48E0A1A51F40F008DAB59 /* page12.jpg in Resources */,
+				B6D48E0C1A51FAC5008DAB59 /* page13.jpg in Resources */,
 				B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */,
+				B60E1F471A50A45A00E40869 /* page3.jpg in Resources */,
+				B60E1F451A50A10A00E40869 /* page4.jpg in Resources */,
+				B60E1F5F1A513F5500E40869 /* page11.jpg in Resources */,
 				B6D0BF171A47C6D700A87B1D /* CarWontStart.mp3 in Resources */,
+				B60E1F511A510EB500E40869 /* page7.png in Resources */,
+				B60E1F531A5115C500E40869 /* page6.jpg in Resources */,
+				B60E1F5D1A513DEA00E40869 /* page10.png in Resources */,
 				B620871A1A3C2BE6003691D1 /* Info.plist in Resources */,
 				B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */,
 				B62087201A3C2BE6003691D1 /* page1.jpg in Resources */,
+				B60E1F591A5133BD00E40869 /* page8.jpg in Resources */,
 				B62087131A3C2BE6003691D1 /* Main.storyboard in Resources */,
 				B6BFAA571A3F7608008E2756 /* carDriveOff.mp3 in Resources */,
 			);

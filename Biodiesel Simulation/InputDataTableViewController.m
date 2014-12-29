@@ -132,7 +132,6 @@
             {
                 self.litIcon = self.bigTime2;
             }
-
         } else if(slider == self.mixingLengthSlider)
         {
             if(slidingLeft)
@@ -629,10 +628,23 @@
     [UIView animateWithDuration:1.5 animations:^{
         blurEffectView.alpha = 1;
     } completion:^(BOOL finished) {
-        self.pageTitles = @[@"Welcome to Biodiesel Simulator! We have prepared a quick and handy tutorial to get you started. Swipe through to read!",
-                            @"Biodiesel is a domestically produced, renewable fuel that can be manufactured from organic materials like cooking oil or animal fats. ",
-                            @"Blah blah blah explanation explanation explanation explanation explanation....", @"TEST"];
-        self.pageImages = @[@"page1.jpg", @"page2.jpeg", @"page3.jpg", @"page4.png"];
+        self.pageTitles =
+  @[@"Welcome to Biodiesel Simulator! We have prepared a quick and handy tutorial to get you started. Swipe through to read!",
+                            @"Biodiesel is a clean fuel produced from domestic, renewable resources. It's a promising alternative to normal diesel that could someday bring about a more earth-friendly future!",
+                            @"Biodiesel is still costly. It's new, and the general public is uncertain about it. Overall it has a long way to go before it can truly replace normal diesel fuel. So we need help!",
+                            @"We need you, the user, to help us find effecient ways to make biofuel. We need cheap ways to make quality biofuel, and this is most effectively done by humans.",
+                            @"This app allows you to simulate the creation of biofuel, just like you're making it yourself! And we need you to use this capability to try and find the best ways to make biofuel.",
+                            @"Here you will chose the chemical ingredients for your biofuel. Chose the methanol, catalyst, and oil amount, along with the cooking temperature, mixing, and settling length.",
+                            @"Then, hit this button to start the simulation. After the simulation has finished, you see what the quality of your fuel was, and if it is cheap or not.",
+                            @"Quality biodiesel fuel is fuel with a higher than 95% conversion rate. This is becuase you don't want more than 5% of waste products in your fuel.",
+                            @"After your fuel has been created, the app demonstrates how high quality and cost effecient it is by filling up $50 worth of your fuel in a car and seeing how far it can go!",
+                            @"Due to the formula for biodiesel creation, the amount of oil that you can use to make fuel is limited. You must level up in the game to unlock every amount of selectable oil.",
+                            @"The Auto button will give you a helping hand and give you random ingredients that have a higher chance of being high quality, i.e. an above 95% conversion ratio. Try it out!",
+                            @"One more thing, hit these buttons to get a quick definition of each of these items, like what the Current Level section means.",
+                            @"Well, that's it. You can always hit the tutorial button to view this tutorial again. Now, go and make some excellent biodiesel! For science!"];
+        
+        self.pageImages = @[@"page1.jpg", @"page2.jpeg", @"page3.jpg", @"page4.jpg", @"page5.jpg", @"page6.jpg", @"page7.png", @"page8.jpg",
+                            @"page9.jpg", @"page10.png", @"page11.jpg", @"page12.jpg", @"page13.jpg"];
         
         // Create page view controller
         self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
@@ -669,31 +681,31 @@
 
 - (void)loadPreviousInputs
 {
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         [self.methanolSlider setValue:[self.previousSimulationInputs[@"Initial Methanol"] integerValue] animated:YES];
     }];
     [self sliderValueChanged:self.methanolSlider];
     
     
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         [self.temperatureSlider setValue:[self.previousSimulationInputs[@"Temperature"] integerValue] animated:YES];
     }];
     [self sliderValueChanged:self.temperatureSlider];
     
     
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         [self.catalystSlider setValue:[self.previousSimulationInputs[@"Initial Catalyst"] integerValue] animated:YES];
     }];
     [self sliderValueChanged:self.catalystSlider];
     
     
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         [self.mixingLengthSlider setValue:[self.previousSimulationInputs[@"Mixing Length"] integerValue] animated:YES];
     }];
     [self sliderValueChanged:self.mixingLengthSlider];
     
     
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         [self.settlingTimeSlider setValue:[self.previousSimulationInputs[@"Settling Time"] integerValue] animated:YES];
     }];
     [self sliderValueChanged:self.settlingTimeSlider];

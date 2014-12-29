@@ -73,7 +73,7 @@
 // Start the simulation by initializing a simulation operation and adding it to the simulation queue
 - (void)startSimulation
 {
-    self.simulationOperation = [[SimulationOperation alloc] initSimulationWith:self.initialOil methanol:self.initialMethanol catalyst:self.initialMethanol temperature:self.temperature mixingLength:self.mixingLength andSettlingTime:self.settlingTime];
+    self.simulationOperation = [[SimulationOperation alloc] initSimulationWith:self.initialOil methanol:self.initialMethanol catalyst:self.initialCatalyst temperature:self.temperature mixingLength:self.mixingLength andSettlingTime:self.settlingTime];
     self.simulationOperation.delegate = self;
     [self.simulationQueue addOperation:self.simulationOperation];
 }
