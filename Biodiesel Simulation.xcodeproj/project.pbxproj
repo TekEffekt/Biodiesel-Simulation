@@ -50,6 +50,9 @@
 		B6D0BF171A47C6D700A87B1D /* CarWontStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6D0BF161A47C6D700A87B1D /* CarWontStart.mp3 */; };
 		B6D48E0A1A51F40F008DAB59 /* page12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E091A51F40F008DAB59 /* page12.jpg */; };
 		B6D48E0C1A51FAC5008DAB59 /* page13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E0B1A51FAC5008DAB59 /* page13.jpg */; };
+		B6D48E0F1A532B1D008DAB59 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E0E1A532B1D008DAB59 /* WYPopoverController.m */; };
+		B6D48E111A532B72008DAB59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D48E101A532B72008DAB59 /* QuartzCore.framework */; };
+		B6D48E141A5350E8008DAB59 /* ItemDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */; };
 		B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +130,11 @@
 		B6D0BF161A47C6D700A87B1D /* CarWontStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CarWontStart.mp3; sourceTree = "<group>"; };
 		B6D48E091A51F40F008DAB59 /* page12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page12.jpg; sourceTree = "<group>"; };
 		B6D48E0B1A51FAC5008DAB59 /* page13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page13.jpg; sourceTree = "<group>"; };
+		B6D48E0D1A532B1D008DAB59 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		B6D48E0E1A532B1D008DAB59 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		B6D48E101A532B72008DAB59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B6D48E121A5350E8008DAB59 /* ItemDefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemDefinitionViewController.h; path = "Biodiesel Simulation/ItemDefinitionViewController.h"; sourceTree = SOURCE_ROOT; };
+		B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDefinitionViewController.m; path = "Biodiesel Simulation/ItemDefinitionViewController.m"; sourceTree = SOURCE_ROOT; };
 		B6F71D491A4140C400162FD0 /* UIView+Glow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glow.h"; sourceTree = "<group>"; };
 		B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D48E111A532B72008DAB59 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +161,7 @@
 		B62086A51A3C2824003691D1 = {
 			isa = PBXGroup;
 			children = (
+				B6D48E101A532B72008DAB59 /* QuartzCore.framework */,
 				B62086B01A3C2824003691D1 /* Biodiesel Simulation */,
 				B62086CA1A3C2824003691D1 /* Biodiesel SimulationTests */,
 				B62086AF1A3C2824003691D1 /* Products */,
@@ -170,14 +180,8 @@
 		B62086B01A3C2824003691D1 /* Biodiesel Simulation */ = {
 			isa = PBXGroup;
 			children = (
-				B62087081A3C2BE6003691D1 /* SimulationOperation.h */,
-				B62087091A3C2BE6003691D1 /* SimulationOperation.m */,
-				B620870C1A3C2BE6003691D1 /* SmartSlider.h */,
-				B620870D1A3C2BE6003691D1 /* SmartSlider.m */,
-				B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */,
-				B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */,
-				B6F71D491A4140C400162FD0 /* UIView+Glow.h */,
-				B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */,
+				B6D48E161A55E389008DAB59 /* Other */,
+				B6D48E151A55E2C6008DAB59 /* Custom Views */,
 				B62086E31A3C2BE5003691D1 /* Base.lproj */,
 				B620872F1A3C2D1D003691D1 /* Sprite Kit */,
 				B62087311A3C2E68003691D1 /* View Controllers */,
@@ -226,6 +230,7 @@
 				B62086F01A3C2BE5003691D1 /* GasGaugeNode.m */,
 				B62086F91A3C2BE5003691D1 /* MyParticle.sks */,
 				B6397E381A3D31B100915853 /* Level Up Effect.sks */,
+				B620870E1A3C2BE6003691D1 /* spark.png */,
 				B62087061A3C2BE6003691D1 /* ScrollingNode.h */,
 				B62087071A3C2BE6003691D1 /* ScrollingNode.m */,
 			);
@@ -262,6 +267,8 @@
 				B62087011A3C2BE5003691D1 /* RegisterTableViewController.m */,
 				B62087021A3C2BE5003691D1 /* ResultsTableViewController.h */,
 				B62087031A3C2BE5003691D1 /* ResultsTableViewController.m */,
+				B6D48E121A5350E8008DAB59 /* ItemDefinitionViewController.h */,
+				B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */,
 				B620870A1A3C2BE6003691D1 /* SimulationViewController.h */,
 				B620870B1A3C2BE6003691D1 /* SimulationViewController.m */,
 			);
@@ -273,7 +280,6 @@
 			children = (
 				B62086ED1A3C2BE5003691D1 /* CarDistanceGame.h */,
 				B62086EE1A3C2BE5003691D1 /* CarDistanceGame.m */,
-				B620870E1A3C2BE6003691D1 /* spark.png */,
 				B620870F1A3C2BE6003691D1 /* TheSimulation.h */,
 				B62087101A3C2BE6003691D1 /* TheSimulation.m */,
 			);
@@ -298,6 +304,30 @@
 				B6D48E0B1A51FAC5008DAB59 /* page13.jpg */,
 			);
 			name = "Tutorial Images";
+			sourceTree = "<group>";
+		};
+		B6D48E151A55E2C6008DAB59 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71D491A4140C400162FD0 /* UIView+Glow.h */,
+				B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */,
+				B620870C1A3C2BE6003691D1 /* SmartSlider.h */,
+				B620870D1A3C2BE6003691D1 /* SmartSlider.m */,
+				B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */,
+				B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		B6D48E161A55E389008DAB59 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B62087081A3C2BE6003691D1 /* SimulationOperation.h */,
+				B62087091A3C2BE6003691D1 /* SimulationOperation.m */,
+				B6D48E0D1A532B1D008DAB59 /* WYPopoverController.h */,
+				B6D48E0E1A532B1D008DAB59 /* WYPopoverController.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,11 +458,13 @@
 				B620872A1A3C2BE6003691D1 /* SimulationViewController.m in Sources */,
 				B62087281A3C2BE6003691D1 /* ScrollingNode.m in Sources */,
 				B620872B1A3C2BE6003691D1 /* SmartSlider.m in Sources */,
+				B6D48E0F1A532B1D008DAB59 /* WYPopoverController.m in Sources */,
 				B62087161A3C2BE6003691D1 /* CarAnimationViewController.m in Sources */,
 				B62087181A3C2BE6003691D1 /* GasGaugeNode.m in Sources */,
 				B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */,
 				B620871D1A3C2BE6003691D1 /* LogInTableViewController.m in Sources */,
 				B62087151A3C2BE6003691D1 /* CarAnimationScene.m in Sources */,
+				B6D48E141A5350E8008DAB59 /* ItemDefinitionViewController.m in Sources */,
 				B62087111A3C2BE6003691D1 /* AppDelegate.m in Sources */,
 				B62087261A3C2BE6003691D1 /* ResultsTableViewController.m in Sources */,
 				B62087251A3C2BE6003691D1 /* RegisterTableViewController.m in Sources */,

@@ -244,7 +244,7 @@
     CGFloat gas = [self.gameResults[@"Gallons"] floatValue];
     CGFloat angle = [self getAngleForGas:gas];
     
-    [self.gasGauge moveGaugeToAngle:angle withDuration:[self.gameResults[@"Gallons"] floatValue]/50.0];
+    [self.gasGauge moveGaugeToAngle:angle withDuration:[self.gameResults[@"Gallons"] floatValue]/40.0];
     
     self.gasFillingLabel = [self getGasFillingLabel];
     self.gasFillingLabel.position = CGPointMake(CGRectGetMidX(self.gasGauge.frame), self.gasGauge.position.y + self.gasGauge.size.height);
