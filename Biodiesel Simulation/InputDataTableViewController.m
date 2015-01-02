@@ -640,11 +640,12 @@
                             @"After your fuel has been created, the app demonstrates how high quality and cost effecient it is by filling up $50 worth of your fuel in a car and seeing how far it can go!",
                             @"Due to the formula for biodiesel creation, the amount of oil that you can use to make fuel is limited. You must level up in the game to unlock every amount of selectable oil.",
                             @"The Auto button will give you a helping hand and give you random ingredients that have a higher chance of being high quality, i.e. an above 95% conversion ratio. Try it out!",
-                            @"One more thing, hit these buttons to get a quick definition of each of these items, like what the Current Level section means.",
+                            @"Hit these buttons to get a quick definition of each of these items, like what the Current Level section means.",
+                            @"And don't forget to check out our webclient at http://cinnamon.cs.uwp.edu/biodiesel/ You can review all your previous simulations here, and more!!",
                             @"Well, that's it. You can always hit the tutorial button to view this tutorial again. Now, go and make some excellent biodiesel! For science!"];
         
         self.pageImages = @[@"page1.jpg", @"page2.jpeg", @"page3.jpg", @"page4.jpg", @"page5.jpg", @"page6.jpg", @"page7.png", @"page8.jpg",
-                            @"page9.jpg", @"page10.png", @"page11.jpg", @"page12.jpg", @"page13.jpg"];
+                            @"page9.jpg", @"page10.png", @"page11.jpg", @"page12.jpg", @"page13.jpg", @"page14.jpg"];
         
         // Create page view controller
         self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
