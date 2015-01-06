@@ -85,7 +85,7 @@
 #pragma mark - Scene Life Cycle
 - (void)didMoveToView:(SKView *)view
 {
-    self.scaleMode = SKSceneScaleModeAspectFit;
+    self.scaleMode = SKSceneScaleModeFill;
     
     [self addChild:self.background];
     [self addChild:self.gasGauge];
@@ -110,9 +110,9 @@
             self.gasGauge.needleDoneMoving = NO;
             [self.carStartSound play];
         }
-    } else if(self.carAnimationStarted && self.background.scrollingSpeed < 60)
+    } else if(self.carAnimationStarted && self.background.scrollingSpeed < 50)
     {
-        self.background.scrollingSpeed *= 1.05; // gradually speed up the car
+        self.background.scrollingSpeed *= 1.02; // gradually speed up the car
         [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(stopCarAnimation:) userInfo:nil repeats:NO];
         [self.gasGauge moveGaugeToAngle:M_PI/2 withDuration:6.0];
         self.timerStarted = YES;

@@ -34,7 +34,6 @@
         [output appendFormat:@"%02x", digest[i]];
     
     return  output;
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

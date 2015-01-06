@@ -25,6 +25,11 @@
     {
         [self checkIfLoginIsValid];
     }
+    
+    else if(indexPath.section == 2 && indexPath.row == 0)
+    {
+        [self performSegueWithIdentifier:@"To Register" sender:self];
+    }
 }
 
 - (NSString *)md5:(NSString *) input

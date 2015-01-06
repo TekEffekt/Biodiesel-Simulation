@@ -182,6 +182,8 @@
     return header;
 }
 
+
+
 - (IBAction)sliderValueChanged:(UISlider *)sender
 {
     if(sender == self.methanolSlider)
@@ -325,14 +327,8 @@
         case 5: oilToGlow = self.bigOil; break;
     }
     
-    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:1];
-    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionTop animated:NO];
-    
     [self makeViewGlow:oilToGlow color:[UIColor orangeColor]];
     [oilToGlow startGlowingWithColor:[UIColor orangeColor] intensity:2.0];
-    
-    NSIndexPath *path2 = [NSIndexPath indexPathForRow:0 inSection:7];
-    [self.tableView scrollToRowAtIndexPath:path2 atScrollPosition:UITableViewScrollPositionTop animated:YES];
     
     [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"Just Unlocked Level"];
 }
@@ -541,6 +537,12 @@
     [super viewDidLoad];
     self.oil = 5;
     self.oilAmountNotChosen = YES;
+    
+    if([[NSUserDefaults standardUserDefaults] valueForKey:@"Just Unlocked Level"])
+    {
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:7];
+        [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionTop animated:NO];
+    }
 }
 
 #pragma mark - Tutorial
