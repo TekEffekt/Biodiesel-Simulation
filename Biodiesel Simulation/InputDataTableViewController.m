@@ -657,8 +657,10 @@
         NSArray *viewControllers = @[startingViewController];
         [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
         
-        // Change the size of page view controller
-        self.pageViewController.view.frame = CGRectMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y, self.tableView.contentOffset.x + self.tableView.bounds.size.width, self.tableView.contentOffset.y + self.tableView.bounds.size.height);
+//        // Change the size of page view controller
+//        self.pageViewController.view.frame = CGRectMake(self.tableView.contentOffset.x, self.tableView.contentOffset.y, self.tableView.contentOffset.x + self.tableView.bounds.size.width, self.tableView.contentOffset.y + self.tableView.bounds.size.height);
+        
+        self.pageViewController.view.frame = self.view.bounds;
         
         [self addChildViewController:_pageViewController];
         [self.view addSubview:_pageViewController.view];
