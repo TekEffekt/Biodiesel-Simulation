@@ -564,6 +564,9 @@
         {
             [self loadTutorial];
         }
+    } else if(indexPath.section == 8)
+    {
+        [self performSegueWithIdentifier:@"Back To Login" sender:self];
     }
 }
 

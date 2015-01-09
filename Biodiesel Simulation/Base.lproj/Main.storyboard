@@ -925,6 +925,40 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="DZN-Xu-Fp7">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="CWW-2z-0q7">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CWW-2z-0q7" id="GCE-Fg-0E6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNC-Op-R9X">
+                                                    <rect key="frame" x="81" y="1" width="159" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="398" id="Wir-GU-BZ2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                    <state key="normal" title="Back To Login">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Wir-GU-BZ2"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="tutorialButtonPressed:" destination="OKH-TR-YXk" eventType="touchUpInside" id="tAb-ru-M11"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="JNC-Op-R9X" secondAttribute="centerX" constant="-0.5" id="R4a-Lx-8f4"/>
+                                                <constraint firstAttribute="centerY" secondItem="JNC-Op-R9X" secondAttribute="centerY" constant="-0.5" id="YbX-wa-ObR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="OKH-TR-YXk" id="wue-Ea-fJJ"/>
@@ -969,6 +1003,7 @@
                         <outletCollection property="sliders" destination="6hr-HL-r5I" id="cQj-4h-dsr"/>
                         <outletCollection property="sliders" destination="3tw-GI-Yfz" id="f7A-qi-KE3"/>
                         <segue destination="j4g-X8-YOn" kind="show" id="mGp-d4-aEp"/>
+                        <segue destination="0BS-AP-W0H" kind="show" identifier="Back To Login" id="LUp-4R-doU"/>
                     </connections>
                 </tableViewController>
                 <panGestureRecognizer cancelsTouchesInView="NO" delaysTouchesEnded="NO" minimumNumberOfTouches="1" id="I1m-qq-NdZ">
@@ -1463,6 +1498,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="loF-3h-obG"/>
+        <segue reference="LUp-4R-doU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
