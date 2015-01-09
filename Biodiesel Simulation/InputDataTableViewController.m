@@ -12,6 +12,7 @@
 #import "CarDistanceGame.h"
 #import "PageContentViewController.h"
 #import "UIView+Glow.h"
+#import "Reachability.h"
 
 @interface InputDataTableViewController () <UIPageViewControllerDataSource>
 
@@ -442,22 +443,30 @@
         
     } else
     {
-        NSURL *url = [NSURL URLWithString:@"http://cinnamon.cs.uwp.edu/biodiesel/suggestions/suggestionRequestor.php"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-        NSURLSessionTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
-            if(!error)
-            {
-                NSString *strResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
-                NSArray *suggestions = [strResult componentsSeparatedByString:@","];
-                self.suggestedValues = suggestions;
-                
-                [self performSelectorOnMainThread:@selector(moveSlidersToSuggestedValues) withObject:self waitUntilDone:NO];
-            }
-        }];
-        
-        [task resume];
+        if([Reachability connectedToInternet])
+        {
+            
+            NSURL *url = [NSURL URLWithString:@"http://cinnamon.cs.uwp.edu/biodiesel/suggestions/suggestionRequestor.php"];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+            NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+            NSURLSessionTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+                if(!error)
+                {
+                    NSString *strResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
+                    NSArray *suggestions = [strResult componentsSeparatedByString:@","];
+                    self.suggestedValues = suggestions;
+                    
+                    [self performSelectorOnMainThread:@selector(moveSlidersToSuggestedValues) withObject:self waitUntilDone:NO];
+                }
+            }];
+            
+            [task resume];
+        } else
+        {
+            UIAlertController * alert = [Reachability noInternetAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     }
 }
 

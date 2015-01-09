@@ -10,6 +10,8 @@
 
 @interface PageContentViewController ()
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *verticalSpaceConstraint;
+
 @end
 
 @implementation PageContentViewController
@@ -31,7 +33,26 @@
     self.tutorialText.text = self.titleText;
     self.tutorialText.textAlignment = NSTextAlignmentCenter;
     self.tutorialText.textColor = [UIColor whiteColor];
-    self.tutorialText.font = [[UIFont preferredFontForTextStyle:UIFontTextStyleBody] fontWithSize:16];
+    
+    if(self.view.frame.size.height > 700)
+    {
+        self.verticalSpaceConstraint.constant = -130;
+        self.tutorialText.font = [[UIFont preferredFontForTextStyle:UIFontTextStyleBody] fontWithSize:18];
+    } else if(self.view.frame.size.height > 650)
+    {
+        self.verticalSpaceConstraint.constant = -100;
+        self.tutorialText.font = [[UIFont preferredFontForTextStyle:UIFontTextStyleBody] fontWithSize:17];
+    } else if (self.view.frame.size.height > 560)
+    {
+        self.verticalSpaceConstraint.constant = -40;
+        self.tutorialText.font = [[UIFont preferredFontForTextStyle:UIFontTextStyleBody] fontWithSize:16];
+    } else
+    {
+        self.verticalSpaceConstraint.constant = 10;
+        self.tutorialText.font = [[UIFont preferredFontForTextStyle:UIFontTextStyleBody] fontWithSize:13.3];
+    }
+
+    NSLog(@"%f", self.view.frame.size.height);
     
     self.pageControl.currentPage = self.pageIndex;
     

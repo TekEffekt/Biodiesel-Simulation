@@ -408,33 +408,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-gO-zhV">
-                                <rect key="frame" x="50" y="99" width="220" height="280"/>
+                                <rect key="frame" x="50" y="89.5" width="220" height="280"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="0W6-cZ-HaN"/>
-                                    <constraint firstAttribute="width" constant="220" id="tBX-Uy-Wnv"/>
+                                    <constraint firstAttribute="height" constant="280" id="X3W-al-7xH"/>
+                                    <constraint firstAttribute="width" constant="220" id="rQL-A2-YZ0"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Welcome to Biodiesel Simulator! We have prepared a quick and handy tutorial to get you started. Swipe through to read!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voS-Yb-xgF">
-                                <rect key="frame" x="16" y="396" width="288" height="84"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voS-Yb-xgF">
+                                <rect key="frame" x="16" y="374" width="288" height="105.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="Xyl-xA-UQZ"/>
+                                    <constraint firstAttribute="width" constant="288" id="rin-s6-nnD"/>
                                 </constraints>
+                                <string key="text">We need you, the user, to help us find effecient ways to make biofuel. We need cheap ways to make quality biofuel, and this is most effectively done by humans."</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cbP-gO-zhV" firstAttribute="bottom" secondItem="gd2-wV-fRC" secondAttribute="top" multiplier="0.79" id="HUR-eD-3Gy"/>
-                            <constraint firstAttribute="centerX" secondItem="voS-Yb-xgF" secondAttribute="centerX" id="JzX-Js-kcq"/>
-                            <constraint firstItem="gd2-wV-fRC" firstAttribute="top" secondItem="voS-Yb-xgF" secondAttribute="bottom" id="YM0-ia-juN"/>
-                            <constraint firstAttribute="centerX" secondItem="cbP-gO-zhV" secondAttribute="centerX" id="dyu-d6-nTW"/>
+                            <constraint firstAttribute="centerX" secondItem="voS-Yb-xgF" secondAttribute="centerX" id="4fE-wN-XzQ"/>
+                            <constraint firstAttribute="centerX" secondItem="cbP-gO-zhV" secondAttribute="centerX" id="f5J-en-z1Z"/>
+                            <constraint firstItem="voS-Yb-xgF" firstAttribute="top" secondItem="cbP-gO-zhV" secondAttribute="bottom" constant="4.5" id="hmC-aq-HMz"/>
+                            <constraint firstItem="cbP-gO-zhV" firstAttribute="bottom" secondItem="gd2-wV-fRC" secondAttribute="top" multiplier="0.77" id="iJq-bQ-6bh"/>
+                            <constraint firstItem="cbP-gO-zhV" firstAttribute="top" secondItem="7xg-Gu-r1W" secondAttribute="bottom" constant="73" id="nMd-3m-flB"/>
                             <constraint firstAttribute="centerX" secondItem="cbP-gO-zhV" secondAttribute="centerX" id="wAA-WE-3mb"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="nMd-3m-flB"/>
                                 <exclude reference="wAA-WE-3mb"/>
                             </mask>
                         </variation>
@@ -443,6 +446,7 @@
                     <connections>
                         <outlet property="backgroundImageView" destination="cbP-gO-zhV" id="arE-Kc-tNr"/>
                         <outlet property="tutorialText" destination="voS-Yb-xgF" id="UZx-EK-ACm"/>
+                        <outlet property="verticalSpaceConstraint" destination="iJq-bQ-6bh" id="htU-re-DvR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbq-YF-I0C" userLabel="First Responder" sceneMemberID="firstResponder"/>

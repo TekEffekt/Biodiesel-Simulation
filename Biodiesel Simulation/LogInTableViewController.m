@@ -8,6 +8,7 @@
 
 #import "LogInTableViewController.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "Reachability.h"
 
 @interface LogInTableViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
@@ -48,30 +49,37 @@
 
 - (void)checkIfLoginIsValid
 {
-    NSString *username = self.usernameTextField.text;
-    NSString *password = self.passwordTextField.text;
-    NSString *encrypt = [self md5:password];
-
-    NSLog(@"Username: %@", username);
-    NSLog(@"Password: %@", password);
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cinnamon.cs.uwp.edu/biodiesel/app_userlogin.php?username=%@&password=%@", username, encrypt]];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request
-                                                    completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
-                                                        if(!error)
-                                                        {
-                                                            NSString *stringResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
-                                                            dispatch_async(dispatch_get_main_queue(), ^(void)
-                                                                           {
-                                                                               self.loginResult = stringResult;
-                                                                               [self login:username];
-                                                                           });
-                                                        }
-                                                    }];
-    [task resume];
+    if([Reachability connectedToInternet])
+    {
+        NSString *username = self.usernameTextField.text;
+        NSString *password = self.passwordTextField.text;
+        NSString *encrypt = [self md5:password];
+        
+        NSLog(@"Username: %@", username);
+        NSLog(@"Password: %@", password);
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://cinnamon.cs.uwp.edu/biodiesel/app_userlogin.php?username=%@&password=%@", username, encrypt]];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+        NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request
+                                                        completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+                                                            if(!error)
+                                                            {
+                                                                NSString *stringResult = [[NSString alloc] initWithData:[NSData dataWithContentsOfURL:location] encoding:NSUTF8StringEncoding];
+                                                                dispatch_async(dispatch_get_main_queue(), ^(void)
+                                                                               {
+                                                                                   self.loginResult = stringResult;
+                                                                                   [self login:username];
+                                                                               });
+                                                            }
+                                                        }];
+        [task resume];
+    } else
+    {
+        UIAlertController *alert = [Reachability noInternetAlert];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)login:(NSString*)username

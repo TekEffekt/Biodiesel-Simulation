@@ -54,6 +54,7 @@
 		B6D48E141A5350E8008DAB59 /* ItemDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */; };
 		B6D48E191A5756D9008DAB59 /* page13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E171A5756D9008DAB59 /* page13.jpg */; };
 		B6D48E1A1A5756D9008DAB59 /* page14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E181A5756D9008DAB59 /* page14.jpg */; };
+		B6EC09321A5F5E2D009022EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EC09311A5F5E2D009022EA /* Reachability.m */; };
 		B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,8 @@
 		B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDefinitionViewController.m; path = "Biodiesel Simulation/ItemDefinitionViewController.m"; sourceTree = SOURCE_ROOT; };
 		B6D48E171A5756D9008DAB59 /* page13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = page13.jpg; path = ../../../../../Desktop/page13.jpg; sourceTree = "<group>"; };
 		B6D48E181A5756D9008DAB59 /* page14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = page14.jpg; path = ../../../../../Desktop/page14.jpg; sourceTree = "<group>"; };
+		B6EC09301A5F5E2D009022EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B6EC09311A5F5E2D009022EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B6F71D491A4140C400162FD0 /* UIView+Glow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glow.h"; sourceTree = "<group>"; };
 		B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Glow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -325,6 +328,8 @@
 		B6D48E161A55E389008DAB59 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B6EC09301A5F5E2D009022EA /* Reachability.h */,
+				B6EC09311A5F5E2D009022EA /* Reachability.m */,
 				B62087081A3C2BE6003691D1 /* SimulationOperation.h */,
 				B62087091A3C2BE6003691D1 /* SimulationOperation.m */,
 				B6D48E0D1A532B1D008DAB59 /* WYPopoverController.h */,
@@ -466,6 +471,7 @@
 				B62087161A3C2BE6003691D1 /* CarAnimationViewController.m in Sources */,
 				B62087181A3C2BE6003691D1 /* GasGaugeNode.m in Sources */,
 				B62087241A3C2BE6003691D1 /* PageContentViewController.m in Sources */,
+				B6EC09321A5F5E2D009022EA /* Reachability.m in Sources */,
 				B620871D1A3C2BE6003691D1 /* LogInTableViewController.m in Sources */,
 				B62087151A3C2BE6003691D1 /* CarAnimationScene.m in Sources */,
 				B6D48E141A5350E8008DAB59 /* ItemDefinitionViewController.m in Sources */,

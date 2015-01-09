@@ -8,6 +8,7 @@
 
 #import "RegisterTableViewController.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "Reachability.h"
 
 @interface RegisterTableViewController ()
 
@@ -49,9 +50,16 @@
 
 - (void)registerUser
 {
-    if([self checkIfInputValid])
+    if([Reachability connectedToInternet])
     {
-        [self submitDataToServerToRegister];
+        if([self checkIfInputValid])
+        {
+            [self submitDataToServerToRegister];
+        }
+    } else
+    {
+        UIAlertController *alert = [Reachability noInternetAlert];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
