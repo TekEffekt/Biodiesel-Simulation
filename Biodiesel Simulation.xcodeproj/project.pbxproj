@@ -48,12 +48,12 @@
 		B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA541A3F6F21008E2756 /* carStart.mp3 */; };
 		B6BFAA571A3F7608008E2756 /* carDriveOff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */; };
 		B6D0BF171A47C6D700A87B1D /* CarWontStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6D0BF161A47C6D700A87B1D /* CarWontStart.mp3 */; };
+		B6D328DB1A65C25F008D8C3B /* page14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D328DA1A65C25F008D8C3B /* page14.jpg */; };
+		B6D328DD1A65C2A9008D8C3B /* page13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D328DC1A65C2A9008D8C3B /* page13.jpg */; };
 		B6D48E0A1A51F40F008DAB59 /* page12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E091A51F40F008DAB59 /* page12.jpg */; };
 		B6D48E0F1A532B1D008DAB59 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E0E1A532B1D008DAB59 /* WYPopoverController.m */; };
 		B6D48E111A532B72008DAB59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D48E101A532B72008DAB59 /* QuartzCore.framework */; };
 		B6D48E141A5350E8008DAB59 /* ItemDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */; };
-		B6D48E191A5756D9008DAB59 /* page13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E171A5756D9008DAB59 /* page13.jpg */; };
-		B6D48E1A1A5756D9008DAB59 /* page14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6D48E181A5756D9008DAB59 /* page14.jpg */; };
 		B6EC09321A5F5E2D009022EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EC09311A5F5E2D009022EA /* Reachability.m */; };
 		B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */; };
 /* End PBXBuildFile section */
@@ -130,14 +130,14 @@
 		B6BFAA561A3F7608008E2756 /* carDriveOff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carDriveOff.mp3; sourceTree = "<group>"; };
 		B6D0BF0F1A478A7800A87B1D /* Biodiesel Simulation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Biodiesel Simulation-Bridging-Header.h"; sourceTree = "<group>"; };
 		B6D0BF161A47C6D700A87B1D /* CarWontStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CarWontStart.mp3; sourceTree = "<group>"; };
+		B6D328DA1A65C25F008D8C3B /* page14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page14.jpg; sourceTree = "<group>"; };
+		B6D328DC1A65C2A9008D8C3B /* page13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page13.jpg; sourceTree = "<group>"; };
 		B6D48E091A51F40F008DAB59 /* page12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page12.jpg; sourceTree = "<group>"; };
 		B6D48E0D1A532B1D008DAB59 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
 		B6D48E0E1A532B1D008DAB59 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
 		B6D48E101A532B72008DAB59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6D48E121A5350E8008DAB59 /* ItemDefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemDefinitionViewController.h; path = "Biodiesel Simulation/ItemDefinitionViewController.h"; sourceTree = SOURCE_ROOT; };
 		B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDefinitionViewController.m; path = "Biodiesel Simulation/ItemDefinitionViewController.m"; sourceTree = SOURCE_ROOT; };
-		B6D48E171A5756D9008DAB59 /* page13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = page13.jpg; path = ../../../../../Desktop/page13.jpg; sourceTree = "<group>"; };
-		B6D48E181A5756D9008DAB59 /* page14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = page14.jpg; path = ../../../../../Desktop/page14.jpg; sourceTree = "<group>"; };
 		B6EC09301A5F5E2D009022EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B6EC09311A5F5E2D009022EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B6F71D491A4140C400162FD0 /* UIView+Glow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glow.h"; sourceTree = "<group>"; };
@@ -306,8 +306,8 @@
 				B60E1F5C1A513DEA00E40869 /* page10.png */,
 				B60E1F5E1A513F5500E40869 /* page11.jpg */,
 				B6D48E091A51F40F008DAB59 /* page12.jpg */,
-				B6D48E171A5756D9008DAB59 /* page13.jpg */,
-				B6D48E181A5756D9008DAB59 /* page14.jpg */,
+				B6D328DC1A65C2A9008D8C3B /* page13.jpg */,
+				B6D328DA1A65C25F008D8C3B /* page14.jpg */,
 			);
 			name = "Tutorial Images";
 			sourceTree = "<group>";
@@ -419,7 +419,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B620872C1A3C2BE6003691D1 /* spark.png in Resources */,
-				B6D48E1A1A5756D9008DAB59 /* page14.jpg in Resources */,
 				B620871C1A3C2BE6003691D1 /* Level Up Sound.mp3 in Resources */,
 				B60E1F5B1A51383500E40869 /* page9.jpg in Resources */,
 				B62087121A3C2BE6003691D1 /* LaunchScreen.xib in Resources */,
@@ -429,7 +428,7 @@
 				B620871F1A3C2BE6003691D1 /* MyParticle.sks in Resources */,
 				B60E1F491A50A55700E40869 /* page5.jpg in Resources */,
 				B6D48E0A1A51F40F008DAB59 /* page12.jpg in Resources */,
-				B6D48E191A5756D9008DAB59 /* page13.jpg in Resources */,
+				B6D328DB1A65C25F008D8C3B /* page14.jpg in Resources */,
 				B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */,
 				B60E1F471A50A45A00E40869 /* page3.jpg in Resources */,
 				B60E1F451A50A10A00E40869 /* page4.jpg in Resources */,
@@ -439,6 +438,7 @@
 				B60E1F531A5115C500E40869 /* page6.jpg in Resources */,
 				B60E1F5D1A513DEA00E40869 /* page10.png in Resources */,
 				B620871A1A3C2BE6003691D1 /* Info.plist in Resources */,
+				B6D328DD1A65C2A9008D8C3B /* page13.jpg in Resources */,
 				B62087211A3C2BE6003691D1 /* page2.jpeg in Resources */,
 				B62087201A3C2BE6003691D1 /* page1.jpg in Resources */,
 				B60E1F591A5133BD00E40869 /* page8.jpg in Resources */,
