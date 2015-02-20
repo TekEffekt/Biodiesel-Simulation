@@ -28,6 +28,8 @@
 {
     [super viewWillAppear:animated];
     
+    self.screenName = @"Car Game Animation Screen";
+    
     SKView *skView = (SKView*)self.view;
     CarAnimationScene *scene = [[CarAnimationScene alloc] initWithSize:skView.bounds.size];
     scene.gameResults = self.gameResults;

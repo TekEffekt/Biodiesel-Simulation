@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomIOS7AlertView.h"
+#import "GAITrackedViewController.h"
 
-@interface CarAnimationViewController : UIViewController<CustomIOS7AlertViewDelegate>
+@interface CarAnimationViewController : GAITrackedViewController<CustomIOS7AlertViewDelegate>
 
 @property(strong, nonatomic) NSDictionary *gameResults;
 @property(strong, nonatomic) NSDictionary *simulationResults;

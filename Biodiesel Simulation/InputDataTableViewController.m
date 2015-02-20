@@ -539,6 +539,12 @@
     {
         [self loadPreviousInputs];
     }
+    
+    if(![[NSUserDefaults standardUserDefaults] integerForKey:@"Tutorial Done"])
+    {
+        [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"Tutorial Done"];
+        [self loadTutorial];
+    }
 }
 
 - (void)viewDidLoad

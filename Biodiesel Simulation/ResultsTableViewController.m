@@ -45,10 +45,10 @@
     if(!_definitions)
     {
         NSArray *firstSection =
-  @[@"Your current level. You get to higher levels by making the car travel certain distances. For example, you only have to travel 95 miles to unlock level 3!",
-    @"The number of gallons that were bought. Only $50 worth of your fuel is bought to fill up the car. So, keep your fuel cheap if you want to buy more gallons.",
-    @"The cost of one gallon of your fuel. The price is determined by the temperature that your fuel is cooked in, the mixing length that you have to cook it for, and the oil and methanol that is put in.",
-    @"The distance in miles that your car travelled. The number of miles is determined by how much ethanol is in each gallon, and how many gallons that were bought with $50."];
+      @[@"Your current level. You get to higher levels by making the car travel certain distances. For example, you only have to travel 95 miles to unlock level 3!",
+        @"The number of gallons that were bought. Only $50 worth of your fuel is bought to fill up the car. So, keep your fuel cheap if you want to buy more gallons.",
+        @"The cost of one gallon of your fuel. The price is determined by the temperature that your fuel is cooked in, the mixing length that you have to cook it for, and the oil and methanol that is put in.",
+        @"The distance in miles that your car travelled. The number of miles is determined by how much ethanol is in each gallon, and how many gallons that were bought with $50."];
         
         NSArray *secondSection = @[@"The amount of biodiesel (also known as ethanol) produced per gallon of fuel.",
                                    @"The conversion ratio a.k.a quality of your fuel. This number determines the percentage of your fuel that is biodiesel and not waste. Remember, the conversion ratio has to be above 95% to have the car even start!"];
