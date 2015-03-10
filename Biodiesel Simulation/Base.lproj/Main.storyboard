@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gfe-0F-nI6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gfe-0F-nI6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -60,7 +60,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fMr-sw-sCm">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -79,7 +79,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gYJ-yn-4QH">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -181,7 +181,7 @@
                                                         <constraint firstAttribute="width" constant="304" id="u3a-cL-nxg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="SgQ-6I-mfl"/>
@@ -210,7 +210,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KfR-ox-LSm">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -229,7 +229,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fmv-3I-hUM">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -252,7 +252,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VhB-WK-Nav">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -271,7 +271,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WWE-3t-I1x">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1497,8 +1497,8 @@
         <image name="time" width="58" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="loF-3h-obG"/>
-        <segue reference="LUp-4R-doU"/>
+        <segue reference="N7k-Pp-Xw2"/>
+        <segue reference="QJ3-7l-G6K"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

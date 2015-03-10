@@ -127,9 +127,8 @@
         
         if([CarDistanceGame checkDistanceForLevelUp:[self.gameResults[@"Distance"] floatValue] andStoreLevelUpInfo:NO])
         {
-            [self.car addChild:[self getSpark]];
             [self.highScoreSound play];
-            [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(sparkDone:) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:0.0 target:self selector:@selector(sparkDone:) userInfo:nil repeats:NO];
         } else
         {
             if([self.delegate respondsToSelector:@selector(animationFinished:)])

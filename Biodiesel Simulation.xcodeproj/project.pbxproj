@@ -47,7 +47,6 @@
 		B626E8C61A96C42300B9B681 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B626E8C51A96C42300B9B681 /* SystemConfiguration.framework */; };
 		B626E8C81A96C43300B9B681 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B626E8C71A96C43300B9B681 /* libz.dylib */; };
 		B626E8CA1A96C43E00B9B681 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B626E8C91A96C43E00B9B681 /* libsqlite3.dylib */; };
-		B626E8CE1A96C4A600B9B681 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B626E8CD1A96C4A600B9B681 /* libGoogleAnalyticsServices.a */; };
 		B6397E391A3D31B100915853 /* Level Up Effect.sks in Resources */ = {isa = PBXBuildFile; fileRef = B6397E381A3D31B100915853 /* Level Up Effect.sks */; };
 		B6397E3C1A3D5A8300915853 /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */; };
 		B6BFAA551A3F6F21008E2756 /* carStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B6BFAA541A3F6F21008E2756 /* carStart.mp3 */; };
@@ -59,6 +58,7 @@
 		B6D48E0F1A532B1D008DAB59 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E0E1A532B1D008DAB59 /* WYPopoverController.m */; };
 		B6D48E111A532B72008DAB59 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D48E101A532B72008DAB59 /* QuartzCore.framework */; };
 		B6D48E141A5350E8008DAB59 /* ItemDefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */; };
+		B6D5AE441AA3A26B005261D8 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D5AE431AA3A26B005261D8 /* libGoogleAnalyticsServices.a */; };
 		B6EC09321A5F5E2D009022EA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EC09311A5F5E2D009022EA /* Reachability.m */; };
 		B6F71D4B1A4140C400162FD0 /* UIView+Glow.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F71D4A1A4140C400162FD0 /* UIView+Glow.m */; };
 /* End PBXBuildFile section */
@@ -142,7 +142,6 @@
 		B626E8C51A96C42300B9B681 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B626E8C71A96C43300B9B681 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B626E8C91A96C43E00B9B681 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		B626E8CD1A96C4A600B9B681 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Desktop/GoogleAnalyticsServicesiOS_3.10/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		B6397E381A3D31B100915853 /* Level Up Effect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level Up Effect.sks"; sourceTree = "<group>"; };
 		B6397E3A1A3D5A8300915853 /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
 		B6397E3B1A3D5A8300915853 /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		B6D48E101A532B72008DAB59 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6D48E121A5350E8008DAB59 /* ItemDefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemDefinitionViewController.h; path = "Biodiesel Simulation/ItemDefinitionViewController.h"; sourceTree = SOURCE_ROOT; };
 		B6D48E131A5350E8008DAB59 /* ItemDefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDefinitionViewController.m; path = "Biodiesel Simulation/ItemDefinitionViewController.m"; sourceTree = SOURCE_ROOT; };
+		B6D5AE431AA3A26B005261D8 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		B6EC09301A5F5E2D009022EA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B6EC09311A5F5E2D009022EA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B6F71D491A4140C400162FD0 /* UIView+Glow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Glow.h"; sourceTree = "<group>"; };
@@ -168,9 +168,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B626E8CE1A96C4A600B9B681 /* libGoogleAnalyticsServices.a in Frameworks */,
 				B626E8CA1A96C43E00B9B681 /* libsqlite3.dylib in Frameworks */,
 				B626E8C81A96C43300B9B681 /* libz.dylib in Frameworks */,
+				B6D5AE441AA3A26B005261D8 /* libGoogleAnalyticsServices.a in Frameworks */,
 				B626E8C61A96C42300B9B681 /* SystemConfiguration.framework in Frameworks */,
 				B626E8C41A96C41400B9B681 /* CoreData.framework in Frameworks */,
 				B6D48E111A532B72008DAB59 /* QuartzCore.framework in Frameworks */,
@@ -190,7 +190,7 @@
 		B62086A51A3C2824003691D1 = {
 			isa = PBXGroup;
 			children = (
-				B626E8CD1A96C4A600B9B681 /* libGoogleAnalyticsServices.a */,
+				B6D5AE431AA3A26B005261D8 /* libGoogleAnalyticsServices.a */,
 				B626E8C91A96C43E00B9B681 /* libsqlite3.dylib */,
 				B626E8C71A96C43300B9B681 /* libz.dylib */,
 				B626E8C51A96C42300B9B681 /* SystemConfiguration.framework */,
@@ -433,6 +433,7 @@
 				TargetAttributes = {
 					B62086AD1A3C2824003691D1 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = V8N6W23849;
 					};
 					B62086C61A3C2824003691D1 = {
 						CreatedOnToolsVersion = 6.1;
@@ -650,13 +651,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Biodiesel Simulation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Biodiesel",
 					Simulation,
 					/Users/kylez/Desktop/GoogleAnalyticsServicesiOS_3.10,
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Biodiesel Simulation/Biodiesel Simulation-Bridging-Header.h";
@@ -669,13 +673,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Biodiesel Simulation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Biodiesel",
 					Simulation,
 					/Users/kylez/Desktop/GoogleAnalyticsServicesiOS_3.10,
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Biodiesel Simulation/Biodiesel Simulation-Bridging-Header.h";

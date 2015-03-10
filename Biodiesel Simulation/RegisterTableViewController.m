@@ -10,7 +10,7 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "Reachability.h"
 
-@interface RegisterTableViewController ()
+@interface RegisterTableViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -22,6 +22,15 @@
 @end
 
 @implementation RegisterTableViewController
+
+- (void)viewDidLoad
+{
+    self.usernameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    self.confirmPasswordTextField.delegate = self;
+    self.emailTextField.delegate = self;
+    self.confirmEmailTextField.delegate = self;
+}
 
 - (NSString *) md5:(NSString *) input
 {
@@ -190,5 +199,27 @@
         controller.navigationItem.hidesBackButton = YES;
     }
 }
+
+#pragma mark - Text Field
+// The user clicks anywhere besides the text field and it dismisses the keyboard
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"WHAT");
+    for (UIView *txt in self.view.subviews){
+        if ([txt isKindOfClass:[UITextField class]] && [txt isFirstResponder]) {
+            [txt resignFirstResponder];
+        }
+    }
+}
+
+// The done button is pressed and dismisses the keyboard
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"WHAT");
+    [textField resignFirstResponder];
+    //self.view.center = self.originalCenter
+    
+    return YES;
+}
+
 
 @end

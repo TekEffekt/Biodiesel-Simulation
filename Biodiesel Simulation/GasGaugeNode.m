@@ -40,8 +40,16 @@
 {
     self.needleAngle = angle;
     
-    SKAction *rotation = [SKAction rotateToAngle:self.needleAngle duration:duration];
-    [self.needle runAction:rotation completion:^(void){ self.needleDoneMoving = YES; } ];
+    NSLog(@"angle: %f", angle);
+    
+    if(angle <= 0)
+    {
+        self.needleDoneMoving = YES;
+    } else
+    {
+        SKAction *rotation = [SKAction rotateToAngle:self.needleAngle duration:duration];
+        [self.needle runAction:rotation completion:^(void){ self.needleDoneMoving = YES; } ];
+    }
 }
 
 @end
